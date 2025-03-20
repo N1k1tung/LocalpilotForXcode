@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  Localpilot for Xcode
+//
+//  Created by Nikita Rodin on 20.03.25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+BUNDLE_IDENTIFIER_BASE = com.n1k1tung.localpilot
