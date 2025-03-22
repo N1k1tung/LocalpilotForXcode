@@ -27,6 +27,12 @@
 		0C1A623F2D8F10020026F288 /* Filespace+SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62392D8F10020026F288 /* Filespace+SuggestionService.swift */; };
 		0C1A62402D8F10020026F288 /* Workspace+SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */; };
 		0C1A62412D8F10020026F288 /* LineEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623A2D8F10020026F288 /* LineEdit.swift */; };
+		0C1A62492D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62422D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift */; };
+		0C1A624A2D8F2ED00026F288 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62462D8F2ED00026F288 /* XPCService.swift */; };
+		0C1A624B2D8F2ED00026F288 /* XPCExtensionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62452D8F2ED00026F288 /* XPCExtensionService.swift */; };
+		0C1A624C2D8F2ED00026F288 /* XPCCommunicationBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62442D8F2ED00026F288 /* XPCCommunicationBridge.swift */; };
+		0C1A624D2D8F2ED00026F288 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62432D8F2ED00026F288 /* Models.swift */; };
+		0C1A624E2D8F2ED00026F288 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */; };
 		0CAD873F2D8CAE8B002ABF1D /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 0CAD873E2D8CAE8B002ABF1D /* AsyncAlgorithms */; };
 		0CAD87402D8CAF0A002ABF1D /* RealtimeSuggestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */; };
 		0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */; };
@@ -77,6 +83,12 @@
 		0C1A623A2D8F10020026F288 /* LineEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineEdit.swift; sourceTree = "<group>"; };
 		0C1A623B2D8F10020026F288 /* SuggestionWorkspacePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionWorkspacePlugin.swift; sourceTree = "<group>"; };
 		0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workspace+SuggestionService.swift"; sourceTree = "<group>"; };
+		0C1A62422D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationBridgeXPCServiceProtocol.swift; sourceTree = "<group>"; };
+		0C1A62432D8F2ED00026F288 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0C1A62442D8F2ED00026F288 /* XPCCommunicationBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCCommunicationBridge.swift; sourceTree = "<group>"; };
+		0C1A62452D8F2ED00026F288 /* XPCExtensionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCExtensionService.swift; sourceTree = "<group>"; };
+		0C1A62462D8F2ED00026F288 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
+		0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
 		0C44BFC92D8B8DD500BE2B53 /* Localpilot for Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localpilot for Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeAppInstanceInspector.swift; sourceTree = "<group>"; };
 		0CAD87432D8CAF31002ABF1D /* AppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstanceInspector.swift; sourceTree = "<group>"; };
@@ -155,6 +167,19 @@
 				0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */,
 			);
 			path = WorkspaceSuggestionService;
+			sourceTree = "<group>";
+		};
+		0C1A62482D8F2ED00026F288 /* XPCShared */ = {
+			isa = PBXGroup;
+			children = (
+				0C1A62422D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift */,
+				0C1A62432D8F2ED00026F288 /* Models.swift */,
+				0C1A62442D8F2ED00026F288 /* XPCCommunicationBridge.swift */,
+				0C1A62452D8F2ED00026F288 /* XPCExtensionService.swift */,
+				0C1A62462D8F2ED00026F288 /* XPCService.swift */,
+				0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */,
+			);
+			path = XPCShared;
 			sourceTree = "<group>";
 		};
 		0C44BFC02D8B8DD500BE2B53 = {
@@ -237,6 +262,7 @@
 		0CDF711C2D8C2937002FA8D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A62482D8F2ED00026F288 /* XPCShared */,
 				0C1A62202D8EC83E0026F288 /* Service */,
 				0CF538FE2D8DD1AE007CE2B5 /* Workspace */,
 				0C1A623D2D8F10020026F288 /* WorkspaceSuggestionService */,
@@ -376,6 +402,12 @@
 				0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */,
 				0CAD874A2D8CAF31002ABF1D /* XcodeInspector+TriggerCommand.swift in Sources */,
 				0C1A62362D8F0F6E0026F288 /* ScheduledCleaner.swift in Sources */,
+				0C1A62492D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */,
+				0C1A624A2D8F2ED00026F288 /* XPCService.swift in Sources */,
+				0C1A624B2D8F2ED00026F288 /* XPCExtensionService.swift in Sources */,
+				0C1A624C2D8F2ED00026F288 /* XPCCommunicationBridge.swift in Sources */,
+				0C1A624D2D8F2ED00026F288 /* Models.swift in Sources */,
+				0C1A624E2D8F2ED00026F288 /* XPCServiceProtocol.swift in Sources */,
 				0CAD874B2D8CAF31002ABF1D /* XcodeWindowInspector.swift in Sources */,
 				0CAD87552D8CB07D002ABF1D /* AXNotificationStream.swift in Sources */,
 				0CF539002D8DD1CE007CE2B5 /* NSWorkspaceExt.swift in Sources */,

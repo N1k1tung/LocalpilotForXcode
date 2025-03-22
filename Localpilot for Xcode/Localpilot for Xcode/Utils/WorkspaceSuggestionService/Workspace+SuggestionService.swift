@@ -1,10 +1,4 @@
 import Foundation
-import GitHubCopilotService
-import SuggestionBasic
-import SuggestionProvider
-import Workspace
-import Status
-import XPCShared
 
 public extension Workspace {
     var suggestionPlugin: SuggestionServiceWorkspacePlugin? {
@@ -13,18 +7,6 @@ public extension Workspace {
 
     var suggestionService: SuggestionServiceProvider? {
         suggestionPlugin?.suggestionService
-    }
-
-    var isSuggestionFeatureEnabled: Bool {
-        suggestionPlugin?.isSuggestionFeatureEnabled ?? false
-    }
-
-    var gitHubCopilotPlugin: GitHubCopilotWorkspacePlugin? {
-        plugin(for: GitHubCopilotWorkspacePlugin.self)
-    }
-
-    var gitHubCopilotService: GitHubCopilotService? {
-        gitHubCopilotPlugin?.gitHubCopilotService
     }
 
     struct SuggestionFeatureDisabledError: Error, LocalizedError {

@@ -32,18 +32,6 @@ public final class SuggestionServiceWorkspacePlugin: WorkspacePlugin {
         return _suggestionService
     }
 
-    public var isSuggestionFeatureEnabled: Bool {
-        let isSuggestionDisabledGlobally = UserDefaults.shared
-            .value(for: \.disableSuggestionFeatureGlobally)
-        if isSuggestionDisabledGlobally {
-            let enabledList = UserDefaults.shared.value(for: \.suggestionFeatureEnabledProjectList)
-            if !enabledList.contains(where: { path in projectRootURL.path.hasPrefix(path) }) {
-                return false
-            }
-        }
-        return true
-    }
-
     public init(
         workspace: Workspace,
         suggestionProviderFactory: @escaping SuggestionServiceFactory
