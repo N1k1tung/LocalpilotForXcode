@@ -21,6 +21,12 @@
 		0C1A622F2D8EF99B0026F288 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A622E2D8EF9980026F288 /* Logs.swift */; };
 		0C1A62312D8EFA020026F288 /* ActiveApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62302D8EFA020026F288 /* ActiveApplicationMonitor.swift */; };
 		0C1A62342D8F06270026F288 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */; };
+		0C1A62362D8F0F6E0026F288 /* ScheduledCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62352D8F0F6E0026F288 /* ScheduledCleaner.swift */; };
+		0C1A62382D8F0FB00026F288 /* Workspace+Cleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62372D8F0FB00026F288 /* Workspace+Cleanup.swift */; };
+		0C1A623E2D8F10020026F288 /* SuggestionWorkspacePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623B2D8F10020026F288 /* SuggestionWorkspacePlugin.swift */; };
+		0C1A623F2D8F10020026F288 /* Filespace+SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62392D8F10020026F288 /* Filespace+SuggestionService.swift */; };
+		0C1A62402D8F10020026F288 /* Workspace+SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */; };
+		0C1A62412D8F10020026F288 /* LineEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623A2D8F10020026F288 /* LineEdit.swift */; };
 		0CAD873F2D8CAE8B002ABF1D /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 0CAD873E2D8CAE8B002ABF1D /* AsyncAlgorithms */; };
 		0CAD87402D8CAF0A002ABF1D /* RealtimeSuggestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */; };
 		0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */; };
@@ -65,6 +71,12 @@
 		0C1A62302D8EFA020026F288 /* ActiveApplicationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveApplicationMonitor.swift; sourceTree = "<group>"; };
 		0C1A62322D8EFB830026F288 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
 		0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		0C1A62352D8F0F6E0026F288 /* ScheduledCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledCleaner.swift; sourceTree = "<group>"; };
+		0C1A62372D8F0FB00026F288 /* Workspace+Cleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workspace+Cleanup.swift"; sourceTree = "<group>"; };
+		0C1A62392D8F10020026F288 /* Filespace+SuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filespace+SuggestionService.swift"; sourceTree = "<group>"; };
+		0C1A623A2D8F10020026F288 /* LineEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineEdit.swift; sourceTree = "<group>"; };
+		0C1A623B2D8F10020026F288 /* SuggestionWorkspacePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionWorkspacePlugin.swift; sourceTree = "<group>"; };
+		0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workspace+SuggestionService.swift"; sourceTree = "<group>"; };
 		0C44BFC92D8B8DD500BE2B53 /* Localpilot for Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localpilot for Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeAppInstanceInspector.swift; sourceTree = "<group>"; };
 		0CAD87432D8CAF31002ABF1D /* AppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstanceInspector.swift; sourceTree = "<group>"; };
@@ -117,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				0C1A62212D8EC86A0026F288 /* Service.swift */,
+				0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */,
+				0C1A62352D8F0F6E0026F288 /* ScheduledCleaner.swift */,
+				0C1A62372D8F0FB00026F288 /* Workspace+Cleanup.swift */,
 				0C1A62282D8EE31F0026F288 /* KeyBindingManager */,
 			);
 			path = Service;
@@ -129,6 +144,17 @@
 				0C1A62272D8EE31F0026F288 /* TabToAcceptSuggestion.swift */,
 			);
 			path = KeyBindingManager;
+			sourceTree = "<group>";
+		};
+		0C1A623D2D8F10020026F288 /* WorkspaceSuggestionService */ = {
+			isa = PBXGroup;
+			children = (
+				0C1A62392D8F10020026F288 /* Filespace+SuggestionService.swift */,
+				0C1A623A2D8F10020026F288 /* LineEdit.swift */,
+				0C1A623B2D8F10020026F288 /* SuggestionWorkspacePlugin.swift */,
+				0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */,
+			);
+			path = WorkspaceSuggestionService;
 			sourceTree = "<group>";
 		};
 		0C44BFC02D8B8DD500BE2B53 = {
@@ -213,11 +239,11 @@
 			children = (
 				0C1A62202D8EC83E0026F288 /* Service */,
 				0CF538FE2D8DD1AE007CE2B5 /* Workspace */,
+				0C1A623D2D8F10020026F288 /* WorkspaceSuggestionService */,
 				0CAD875D2D8CB1D4002ABF1D /* SuggestionBasic */,
 				0CAD87502D8CAF37002ABF1D /* XcodeInspector */,
 				0CF538F42D8DC81A007CE2B5 /* Status */,
 				0CF538FA2D8DD0EA007CE2B5 /* SuggestionCommandHandler */,
-				0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */,
 				0CDF71212D8C2AB4002FA8D6 /* AXUIElement.swift */,
 				0CAD87542D8CB07D002ABF1D /* AXNotificationStream.swift */,
 				0CAD87512D8CB05A002ABF1D /* AsyncPassthroughSubject.swift */,
@@ -349,6 +375,7 @@
 				0CDF711A2D8C292F002FA8D6 /* App.swift in Sources */,
 				0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */,
 				0CAD874A2D8CAF31002ABF1D /* XcodeInspector+TriggerCommand.swift in Sources */,
+				0C1A62362D8F0F6E0026F288 /* ScheduledCleaner.swift in Sources */,
 				0CAD874B2D8CAF31002ABF1D /* XcodeWindowInspector.swift in Sources */,
 				0CAD87552D8CB07D002ABF1D /* AXNotificationStream.swift in Sources */,
 				0CF539002D8DD1CE007CE2B5 /* NSWorkspaceExt.swift in Sources */,
@@ -358,6 +385,10 @@
 				0CAD875F2D8CB1D4002ABF1D /* EditorInformation.swift in Sources */,
 				0CAD87602D8CB1D4002ABF1D /* LanguageIdentifierFromFilePath.swift in Sources */,
 				0CAD87612D8CB1D4002ABF1D /* CodeSuggestion.swift in Sources */,
+				0C1A623E2D8F10020026F288 /* SuggestionWorkspacePlugin.swift in Sources */,
+				0C1A623F2D8F10020026F288 /* Filespace+SuggestionService.swift in Sources */,
+				0C1A62402D8F10020026F288 /* Workspace+SuggestionService.swift in Sources */,
+				0C1A62412D8F10020026F288 /* LineEdit.swift in Sources */,
 				0C1A62222D8EC86A0026F288 /* Service.swift in Sources */,
 				0CAD87622D8CB1D4002ABF1D /* ExportedFromLSP.swift in Sources */,
 				0CAD87632D8CB1D4002ABF1D /* String+LineEnding.swift in Sources */,
@@ -371,6 +402,7 @@
 				0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */,
 				0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */,
 				0CAD874E2D8CAF31002ABF1D /* SourceEditor.swift in Sources */,
+				0C1A62382D8F0FB00026F288 /* Workspace+Cleanup.swift in Sources */,
 				0CAD874F2D8CAF31002ABF1D /* AppInstanceInspector.swift in Sources */,
 				0C1A622F2D8EF99B0026F288 /* Logs.swift in Sources */,
 				0CDF711B2D8C292F002FA8D6 /* ContentView.swift in Sources */,

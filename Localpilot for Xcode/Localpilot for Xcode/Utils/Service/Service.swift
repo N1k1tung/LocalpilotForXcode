@@ -14,31 +14,19 @@ public final class Service {
     let workspacePool: WorkspacePool
     public let realtimeSuggestionController = RealtimeSuggestionController()
     public let scheduledCleaner: ScheduledCleaner
-    let globalShortcutManager: GlobalShortcutManager
     let keyBindingManager: KeyBindingManager
-    let xcodeThemeController: XcodeThemeController = .init()
 
     var cancellable = Set<AnyCancellable>()
 
     private init() {
         var workspacePool = WorkspacePool.shared
 
-        BuiltinExtensionManager.shared.setupExtensions([
-            GitHubCopilotExtension(workspacePool: workspacePool)
-        ])
         scheduledCleaner = .init()
         workspacePool.registerPlugin {
             SuggestionServiceWorkspacePlugin(workspace: $0) { SuggestionService.service() }
         }
-        workspacePool.registerPlugin {
-            GitHubCopilotWorkspacePlugin(workspace: $0)
-        }
-        workspacePool.registerPlugin {
-            BuiltinExtensionWorkspacePlugin(workspace: $0)
-        }
         self.workspacePool = workspacePool
 
-        globalShortcutManager = .init(guiController: guiController)
         keyBindingManager = .init(
             workspacePool: workspacePool,
             acceptSuggestion: {
@@ -61,15 +49,12 @@ public final class Service {
         let scheduledCleaner = ScheduledCleaner()
 
         scheduledCleaner.service = self
-        Logger.telemetryLogger = TelemetryLogger()
     }
 
     @MainActor
     public func start() {
         scheduledCleaner.start()
         realtimeSuggestionController.start()
-        guiController.start()
-        xcodeThemeController.start()
         globalShortcutManager.start()
         keyBindingManager.start()
 
@@ -84,25 +69,25 @@ public final class Service {
                             try await self?.workspacePool
                                 .fetchOrCreateWorkspaceAndFilespace(fileURL: fileURL)
                         } catch {
-                            Logger.workspacePool.error(error)
+                            print(error)
                         }
                     }
                 }.store(in: &cancellable)
             
-            await XcodeInspector.shared.safe.$activeWorkspaceURL.receive(on: DispatchQueue.main)
-                .sink { newURL in
-                    if let path = newURL?.path, path != "/", self.guiController.store.chatHistory.selectedWorkspacePath != path {
-                        let name = self.getDisplayNameOfXcodeWorkspace(url: newURL!)
-                        self.guiController.store.send(.switchWorkspace(path: path, name: name))
-                    }
-                    
-                }.store(in: &cancellable)
+//            await XcodeInspector.shared.safe.$activeWorkspaceURL.receive(on: DispatchQueue.main)
+//                .sink { newURL in
+//                    if let path = newURL?.path, path != "/", self.guiController.store.chatHistory.selectedWorkspacePath != path {
+//                        let name = self.getDisplayNameOfXcodeWorkspace(url: newURL!)
+//                        self.guiController.store.send(.switchWorkspace(path: path, name: name))
+//                    }
+//                    
+//                }.store(in: &cancellable)
         }
     }
 
     @MainActor
     public func prepareForExit() async {
-        Logger.service.info("Prepare for exit.")
+        dprint("Prepare for exit.")
         keyBindingManager.stopForExit()
         await scheduledCleaner.closeAllChildProcesses()
     }
