@@ -106,7 +106,6 @@ public actor RealtimeSuggestionController {
         }
 
         Task { @WorkspaceActor in // Get cache ready for real-time suggestions.
-            guard UserDefaults.shared.value(for: \.preCacheOnFileOpen) else { return }
             guard let fileURL = await XcodeInspector.shared.safe.realtimeActiveDocumentURL
             else { return }
             let (_, filespace) = try await Service.shared.workspacePool
@@ -138,23 +137,9 @@ public actor RealtimeSuggestionController {
     func triggerPrefetchDebounced(force: Bool = false) {
         inflightPrefetchTask = Task(priority: .utility) { @WorkspaceActor in
             try? await Task.sleep(nanoseconds: UInt64(
-                max(UserDefaults.shared.value(for: \.realtimeSuggestionDebounce), 0.15)
-                    * 1_000_000_000
+                0.15 * 1_000_000_000
             ))
 
-            if Task.isCancelled { return }
-
-            guard UserDefaults.shared.value(for: \.realtimeSuggestionToggle)
-            else { return }
-
-            if UserDefaults.shared.value(for: \.disableSuggestionFeatureGlobally),
-               let fileURL = await XcodeInspector.shared.safe.activeDocumentURL,
-               let (workspace, _) = try? await Service.shared.workspacePool
-               .fetchOrCreateWorkspaceAndFilespace(fileURL: fileURL)
-            {
-                let isEnabled = workspace.isSuggestionFeatureEnabled
-                if !isEnabled { return }
-            }
             if Task.isCancelled { return }
 
             // So the editor won't be blocked (after information are cached)!

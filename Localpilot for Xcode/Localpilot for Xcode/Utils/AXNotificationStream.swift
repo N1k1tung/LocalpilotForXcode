@@ -1,9 +1,6 @@
 import AppKit
 import ApplicationServices
 import Foundation
-import Logger
-import Preferences
-import Status
 
 public final class AXNotificationStream: AsyncSequence {
     public typealias Stream = AsyncStream<Element>
@@ -56,8 +53,7 @@ public final class AXNotificationStream: AsyncSequence {
         self.line = line
         self.function = function
 
-        let mode: CFRunLoopMode = UserDefaults.shared
-            .value(for: \.observeToAXNotificationWithDefaultMode) ? .defaultMode : .commonModes
+        let mode: CFRunLoopMode = .defaultMode
 
         let runLoop: CFRunLoop = CFRunLoopGetMain()
 

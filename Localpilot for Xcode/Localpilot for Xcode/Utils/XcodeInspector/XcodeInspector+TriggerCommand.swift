@@ -1,8 +1,5 @@
 import AppKit
-import AXExtension
 import Foundation
-import Logger
-import Status
 
 public extension XcodeAppInstanceInspector {
     func triggerCopilotCommand(name: String, activateXcode: Bool = true) async throws {
@@ -65,14 +62,14 @@ public extension AppInstanceInspector {
 
         if activateApp {
             if !runningApplication.activate() {
-                Logger.service.error("""
+                print("""
                 Trigger menu item \(sourcePath): \
                 Xcode not activated.
                 """)
             }
         } else {
             if !runningApplication.isActive {
-                Logger.service.error("""
+                print("""
                 Trigger menu item \(sourcePath): \
                 Xcode not activated.
                 """)
@@ -85,7 +82,7 @@ public extension AppInstanceInspector {
             let app = AXUIElementCreateApplication(runningApplication.processIdentifier)
 
             guard let menuBar = app.menuBar else {
-                Logger.service.error("""
+                print("""
                 Trigger menu item \(sourcePath) failed: \
                 Menu not found.
                 """)
@@ -99,7 +96,7 @@ public extension AppInstanceInspector {
                 if path.isEmpty, let button = currentMenu.child(title: item, role: "AXMenuItem") {
                     let error = AXUIElementPerformAction(button, kAXPressAction as CFString)
                     if error != AXError.success {
-                        Logger.service.error("""
+                        print("""
                         Trigger menu item \(sourcePath) failed: \
                         \(error.localizedDescription)
                         """)
@@ -120,7 +117,7 @@ public extension AppInstanceInspector {
                     #endif
                     currentMenu = menu
                 } else {
-                    Logger.service.error("""
+                    print("""
                     Trigger menu item \(sourcePath) failed: \
                     \(item) is not found.
                     """)
@@ -164,7 +161,7 @@ public extension AppInstanceInspector {
             do {
                 try await runAppleScript(appleScript)
             } catch {
-                Logger.service.error("""
+                print("""
                 Trigger menu item \(path.joined(separator: "/")) failed: \
                 \(error.localizedDescription)
                 """)

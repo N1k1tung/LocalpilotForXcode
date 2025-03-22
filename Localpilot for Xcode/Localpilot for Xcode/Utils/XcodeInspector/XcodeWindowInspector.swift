@@ -1,9 +1,6 @@
 import AppKit
-import AsyncPassthroughSubject
-import AXExtension
 import Combine
 import Foundation
-import Logger
 
 public class XcodeWindowInspector: ObservableObject {
     public let uiElement: AXUIElement

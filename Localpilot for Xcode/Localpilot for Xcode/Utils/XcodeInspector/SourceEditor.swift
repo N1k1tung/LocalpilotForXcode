@@ -1,8 +1,5 @@
 import AppKit
 import Foundation
-import Logger
-import Status
-import SuggestionBasic
 
 /// Representing a source editor inside Xcode.
 public class SourceEditor {
