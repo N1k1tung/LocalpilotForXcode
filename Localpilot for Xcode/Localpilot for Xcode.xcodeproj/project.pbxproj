@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		0C1A620A2D8EC6380026F288 /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A62092D8EC6380026F288 /* Parsing */; };
+		0C1A621B2D8EC7F10026F288 /* WorkspacePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A621A2D8EC7F10026F288 /* WorkspacePool.swift */; };
+		0C1A621C2D8EC7F10026F288 /* FileSaveWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */; };
+		0C1A621D2D8EC7F10026F288 /* Filespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62172D8EC7F10026F288 /* Filespace.swift */; };
+		0C1A621E2D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62182D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift */; };
+		0C1A621F2D8EC7F10026F288 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62192D8EC7F10026F288 /* Workspace.swift */; };
+		0C1A62222D8EC86A0026F288 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62212D8EC86A0026F288 /* Service.swift */; };
+		0C1A62252D8EE2970026F288 /* CGEventOverride in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A62242D8EE2970026F288 /* CGEventOverride */; };
+		0C1A62292D8EE31F0026F288 /* KeyBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62262D8EE31F0026F288 /* KeyBindingManager.swift */; };
+		0C1A622A2D8EE31F0026F288 /* TabToAcceptSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62272D8EE31F0026F288 /* TabToAcceptSuggestion.swift */; };
+		0C1A622D2D8EE3DA0026F288 /* CombineBinding in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A622C2D8EE3DA0026F288 /* CombineBinding */; };
+		0C1A622F2D8EF99B0026F288 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A622E2D8EF9980026F288 /* Logs.swift */; };
+		0C1A62312D8EFA020026F288 /* ActiveApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62302D8EFA020026F288 /* ActiveApplicationMonitor.swift */; };
+		0C1A62342D8F06270026F288 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */; };
 		0CAD873F2D8CAE8B002ABF1D /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 0CAD873E2D8CAE8B002ABF1D /* AsyncAlgorithms */; };
 		0CAD87402D8CAF0A002ABF1D /* RealtimeSuggestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */; };
 		0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */; };
@@ -28,7 +41,6 @@
 		0CDF71162D8C292F002FA8D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF710E2D8C292F002FA8D6 /* Assets.xcassets */; };
 		0CDF71172D8C292F002FA8D6 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF710F2D8C292F002FA8D6 /* Config.xcconfig */; };
 		0CDF71182D8C292F002FA8D6 /* Config.dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF71102D8C292F002FA8D6 /* Config.dev.xcconfig */; };
-		0CDF71192D8C292F002FA8D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF71122D8C292F002FA8D6 /* Info.plist */; };
 		0CDF711A2D8C292F002FA8D6 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF710D2D8C292F002FA8D6 /* App.swift */; };
 		0CDF711B2D8C292F002FA8D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF71112D8C292F002FA8D6 /* ContentView.swift */; };
 		0CDF711E2D8C29CF002FA8D6 /* XcodeInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711D2D8C29CF002FA8D6 /* XcodeInspector.swift */; };
@@ -41,6 +53,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaveWatcher.swift; sourceTree = "<group>"; };
+		0C1A62172D8EC7F10026F288 /* Filespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filespace.swift; sourceTree = "<group>"; };
+		0C1A62182D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedFileRocoverableStorage.swift; sourceTree = "<group>"; };
+		0C1A62192D8EC7F10026F288 /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
+		0C1A621A2D8EC7F10026F288 /* WorkspacePool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacePool.swift; sourceTree = "<group>"; };
+		0C1A62212D8EC86A0026F288 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		0C1A62262D8EE31F0026F288 /* KeyBindingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBindingManager.swift; sourceTree = "<group>"; };
+		0C1A62272D8EE31F0026F288 /* TabToAcceptSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabToAcceptSuggestion.swift; sourceTree = "<group>"; };
+		0C1A622E2D8EF9980026F288 /* Logs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logs.swift; sourceTree = "<group>"; };
+		0C1A62302D8EFA020026F288 /* ActiveApplicationMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveApplicationMonitor.swift; sourceTree = "<group>"; };
+		0C1A62322D8EFB830026F288 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = SOURCE_ROOT; };
+		0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		0C44BFC92D8B8DD500BE2B53 /* Localpilot for Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localpilot for Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeAppInstanceInspector.swift; sourceTree = "<group>"; };
 		0CAD87432D8CAF31002ABF1D /* AppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstanceInspector.swift; sourceTree = "<group>"; };
@@ -80,16 +104,37 @@
 			files = (
 				0C1A620A2D8EC6380026F288 /* Parsing in Frameworks */,
 				0CAD873F2D8CAE8B002ABF1D /* AsyncAlgorithms in Frameworks */,
+				0C1A622D2D8EE3DA0026F288 /* CombineBinding in Frameworks */,
 				0CF538F12D8DC7CF007CE2B5 /* LanguageServerProtocol in Frameworks */,
+				0C1A62252D8EE2970026F288 /* CGEventOverride in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C1A62202D8EC83E0026F288 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0C1A62212D8EC86A0026F288 /* Service.swift */,
+				0C1A62282D8EE31F0026F288 /* KeyBindingManager */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0C1A62282D8EE31F0026F288 /* KeyBindingManager */ = {
+			isa = PBXGroup;
+			children = (
+				0C1A62262D8EE31F0026F288 /* KeyBindingManager.swift */,
+				0C1A62272D8EE31F0026F288 /* TabToAcceptSuggestion.swift */,
+			);
+			path = KeyBindingManager;
+			sourceTree = "<group>";
+		};
 		0C44BFC02D8B8DD500BE2B53 = {
 			isa = PBXGroup;
 			children = (
+				0C1A62322D8EFB830026F288 /* README.md */,
 				0CDF71142D8C292F002FA8D6 /* Localpilot for Xcode */,
 				0C44BFCA2D8B8DD500BE2B53 /* Products */,
 			);
@@ -121,6 +166,7 @@
 				0CAD87472D8CAF31002ABF1D /* XcodeInspector+TriggerCommand.swift */,
 				0CAD87482D8CAF31002ABF1D /* XcodeWindowInspector.swift */,
 				0CDF711D2D8C29CF002FA8D6 /* XcodeInspector.swift */,
+				0C1A62302D8EFA020026F288 /* ActiveApplicationMonitor.swift */,
 			);
 			path = XcodeInspector;
 			sourceTree = "<group>";
@@ -165,6 +211,7 @@
 		0CDF711C2D8C2937002FA8D6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A62202D8EC83E0026F288 /* Service */,
 				0CF538FE2D8DD1AE007CE2B5 /* Workspace */,
 				0CAD875D2D8CB1D4002ABF1D /* SuggestionBasic */,
 				0CAD87502D8CAF37002ABF1D /* XcodeInspector */,
@@ -174,6 +221,8 @@
 				0CDF71212D8C2AB4002FA8D6 /* AXUIElement.swift */,
 				0CAD87542D8CB07D002ABF1D /* AXNotificationStream.swift */,
 				0CAD87512D8CB05A002ABF1D /* AsyncPassthroughSubject.swift */,
+				0C1A622E2D8EF9980026F288 /* Logs.swift */,
+				0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -199,6 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				0CF538FF2D8DD1CE007CE2B5 /* NSWorkspaceExt.swift */,
+				0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */,
+				0C1A62172D8EC7F10026F288 /* Filespace.swift */,
+				0C1A62182D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift */,
+				0C1A62192D8EC7F10026F288 /* Workspace.swift */,
+				0C1A621A2D8EC7F10026F288 /* WorkspacePool.swift */,
 			);
 			path = Workspace;
 			sourceTree = "<group>";
@@ -223,6 +277,8 @@
 				0CAD873E2D8CAE8B002ABF1D /* AsyncAlgorithms */,
 				0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */,
 				0C1A62092D8EC6380026F288 /* Parsing */,
+				0C1A62242D8EE2970026F288 /* CGEventOverride */,
+				0C1A622C2D8EE3DA0026F288 /* CombineBinding */,
 			);
 			productName = "Localpilot for Xcode";
 			productReference = 0C44BFC92D8B8DD500BE2B53 /* Localpilot for Xcode.app */;
@@ -256,6 +312,8 @@
 				0CAD873D2D8CAE8B002ABF1D /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 				0CF538EF2D8DC7CF007CE2B5 /* XCRemoteSwiftPackageReference "LanguageServerProtocol" */,
 				0C1A62082D8EC6380026F288 /* XCRemoteSwiftPackageReference "swift-parsing" */,
+				0C1A62232D8EE2970026F288 /* XCRemoteSwiftPackageReference "CGEventOverride" */,
+				0C1A622B2D8EE3DA0026F288 /* XCRemoteSwiftPackageReference "CombineBinding" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0C44BFCA2D8B8DD500BE2B53 /* Products */;
@@ -276,7 +334,6 @@
 				0CDF71162D8C292F002FA8D6 /* Assets.xcassets in Resources */,
 				0CDF71172D8C292F002FA8D6 /* Config.xcconfig in Resources */,
 				0CDF71182D8C292F002FA8D6 /* Config.dev.xcconfig in Resources */,
-				0CDF71192D8C292F002FA8D6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,19 +352,30 @@
 				0CAD874B2D8CAF31002ABF1D /* XcodeWindowInspector.swift in Sources */,
 				0CAD87552D8CB07D002ABF1D /* AXNotificationStream.swift in Sources */,
 				0CF539002D8DD1CE007CE2B5 /* NSWorkspaceExt.swift in Sources */,
+				0C1A62342D8F06270026F288 /* UserDefaultsKey.swift in Sources */,
 				0CAD875E2D8CB1D4002ABF1D /* Modification.swift in Sources */,
+				0C1A62312D8EFA020026F288 /* ActiveApplicationMonitor.swift in Sources */,
 				0CAD875F2D8CB1D4002ABF1D /* EditorInformation.swift in Sources */,
 				0CAD87602D8CB1D4002ABF1D /* LanguageIdentifierFromFilePath.swift in Sources */,
 				0CAD87612D8CB1D4002ABF1D /* CodeSuggestion.swift in Sources */,
+				0C1A62222D8EC86A0026F288 /* Service.swift in Sources */,
 				0CAD87622D8CB1D4002ABF1D /* ExportedFromLSP.swift in Sources */,
 				0CAD87632D8CB1D4002ABF1D /* String+LineEnding.swift in Sources */,
 				0CAD874C2D8CAF31002ABF1D /* Helpers.swift in Sources */,
 				0CAD87522D8CB05A002ABF1D /* AsyncPassthroughSubject.swift in Sources */,
+				0C1A621B2D8EC7F10026F288 /* WorkspacePool.swift in Sources */,
+				0C1A621C2D8EC7F10026F288 /* FileSaveWatcher.swift in Sources */,
+				0C1A621D2D8EC7F10026F288 /* Filespace.swift in Sources */,
+				0C1A621E2D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift in Sources */,
+				0C1A621F2D8EC7F10026F288 /* Workspace.swift in Sources */,
 				0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */,
 				0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */,
 				0CAD874E2D8CAF31002ABF1D /* SourceEditor.swift in Sources */,
 				0CAD874F2D8CAF31002ABF1D /* AppInstanceInspector.swift in Sources */,
+				0C1A622F2D8EF99B0026F288 /* Logs.swift in Sources */,
 				0CDF711B2D8C292F002FA8D6 /* ContentView.swift in Sources */,
+				0C1A62292D8EE31F0026F288 /* KeyBindingManager.swift in Sources */,
+				0C1A622A2D8EE31F0026F288 /* TabToAcceptSuggestion.swift in Sources */,
 				0CAD87402D8CAF0A002ABF1D /* RealtimeSuggestionController.swift in Sources */,
 				0CDF711E2D8C29CF002FA8D6 /* XcodeInspector.swift in Sources */,
 			);
@@ -450,7 +518,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Localpilot for Xcode\\Info.plist";
+				INFOPLIST_FILE = "Localpilot for Xcode/Localpilot for Xcode/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -479,7 +547,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Localpilot for Xcode\\Info.plist";
+				INFOPLIST_FILE = "Localpilot for Xcode/Localpilot for Xcode/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -526,6 +594,22 @@
 				minimumVersion = 0.12.1;
 			};
 		};
+		0C1A62232D8EE2970026F288 /* XCRemoteSwiftPackageReference "CGEventOverride" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devm33/CGEventOverride";
+			requirement = {
+				branch = "devm33/fix-stale-AXIsProcessTrusted";
+				kind = branch;
+			};
+		};
+		0C1A622B2D8EE3DA0026F288 /* XCRemoteSwiftPackageReference "CombineBinding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/N1k1tung/CombineBinding";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		0CAD873D2D8CAE8B002ABF1D /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
@@ -549,6 +633,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C1A62082D8EC6380026F288 /* XCRemoteSwiftPackageReference "swift-parsing" */;
 			productName = Parsing;
+		};
+		0C1A62242D8EE2970026F288 /* CGEventOverride */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C1A62232D8EE2970026F288 /* XCRemoteSwiftPackageReference "CGEventOverride" */;
+			productName = CGEventOverride;
+		};
+		0C1A622C2D8EE3DA0026F288 /* CombineBinding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C1A622B2D8EE3DA0026F288 /* XCRemoteSwiftPackageReference "CombineBinding" */;
+			productName = CombineBinding;
 		};
 		0CAD873E2D8CAE8B002ABF1D /* AsyncAlgorithms */ = {
 			isa = XCSwiftPackageProductDependency;

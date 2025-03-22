@@ -1,6 +1,24 @@
 {
-  "originHash" : "6b44daffd3387a383d1102a8b2ff6c1911ccd266f4e62820b2cda88f9eff6111",
+  "originHash" : "374bdde65677b72030961ae344cff08213c18cc1a71780ca21216a1dc720524a",
   "pins" : [
+    {
+      "identity" : "cgeventoverride",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/devm33/CGEventOverride",
+      "state" : {
+        "branch" : "devm33/fix-stale-AXIsProcessTrusted",
+        "revision" : "06a9bf1f8f8d47cca221344101cc0274f04cc513"
+      }
+    },
+    {
+      "identity" : "combinebinding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/N1k1tung/CombineBinding",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f8c74360fc3c7eec88dd32ad1d8f1ea6f3a6b362"
+      }
+    },
     {
       "identity" : "jsonrpc",
       "kind" : "remoteSourceControl",

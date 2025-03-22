@@ -3,7 +3,7 @@ import Foundation
 
 public extension NSRunningApplication {
     var isXcode: Bool { bundleIdentifier == "com.apple.dt.Xcode" }
-    var isCopilotForXcodeExtensionService: Bool {
+    var isLocalpilotExtensionService: Bool {
         bundleIdentifier == Bundle.main.bundleIdentifier
     }
 }

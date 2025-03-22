@@ -29,7 +29,7 @@ public class AppInstanceInspector: ObservableObject {
 
     public var isExtensionService: Bool {
         guard !runningApplication.isTerminated else { return false }
-        return runningApplication.isCopilotForXcodeExtensionService
+        return runningApplication.isLocalpilotExtensionService
     }
 
     public func activate() -> Bool {
