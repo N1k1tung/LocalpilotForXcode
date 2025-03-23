@@ -22,7 +22,7 @@ public class SuggestionService: SuggestionServiceType {
         workspaceInfo workspace: WorkspaceProjectInfo
     ) async throws -> [CodeSuggestion] {
 //        try await service.getSuggestions(request, workspace: workspace)
-        []
+        [CodeSuggestion(id: UUID().uuidString, text: "HOHOHOHO!", position: request.cursorPosition, range: CursorRange(start: request.cursorPosition, end: request.cursorPosition))]
     }
 }
 
