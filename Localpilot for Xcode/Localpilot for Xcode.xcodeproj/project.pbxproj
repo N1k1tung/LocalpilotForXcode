@@ -65,6 +65,12 @@
 		0CEAFD9E2D900F7500DCA8E0 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFD9A2D900F7500DCA8E0 /* SourceEditorCommand.swift */; };
 		0CEAFD9F2D900F7500DCA8E0 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFD9B2D900F7500DCA8E0 /* SourceEditorExtension.swift */; };
 		0CEAFDAE2D900FF900DCA8E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDAC2D900FF900DCA8E0 /* main.swift */; };
+		0CEAFDC22D90125500DCA8E0 /* XPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0CEAFDCD2D90130800DCA8E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDC82D90130800DCA8E0 /* main.swift */; };
+		0CEAFDCE2D90130800DCA8E0 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDCA2D90130800DCA8E0 /* XPCService.swift */; };
+		0CEAFDCF2D90130800DCA8E0 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDCB2D90130800DCA8E0 /* XPCServiceProtocol.swift */; };
+		0CEAFDD22D90146200DCA8E0 /* CommunicationBridge in Embed Helpers */ = {isa = PBXBuildFile; fileRef = 0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0CEAFDD62D9014EA00DCA8E0 /* bridgeLaunchAgent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */; };
 		0CF538F12D8DC7CF007CE2B5 /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */; };
 		0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F22D8DC81A007CE2B5 /* Status.swift */; };
 		0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */; };
@@ -79,6 +85,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0CEAFD832D900F5C00DCA8E0;
 			remoteInfo = SourceExtension;
+		};
+		0CEAFDAF2D9011C400DCA8E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C44BFC12D8B8DD500BE2B53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CEAFDA42D900FF000DCA8E0;
+			remoteInfo = CommunicationBridge;
+		};
+		0CEAFDBF2D90125500DCA8E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C44BFC12D8B8DD500BE2B53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CEAFDB42D90125500DCA8E0;
+			remoteInfo = XPCService;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -102,6 +122,38 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		0CEAFDC12D90125500DCA8E0 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				0CEAFDC22D90125500DCA8E0 /* XPCService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEAFDD12D90143700DCA8E0 /* Embed Helpers */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ../Applications;
+			dstSubfolderSpec = 6;
+			files = (
+				0CEAFDD22D90146200DCA8E0 /* CommunicationBridge in Embed Helpers */,
+			);
+			name = "Embed Helpers";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEAFDD52D9014D400DCA8E0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchAgents;
+			dstSubfolderSpec = 1;
+			files = (
+				0CEAFDD62D9014EA00DCA8E0 /* bridgeLaunchAgent.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -167,6 +219,13 @@
 		0CEAFD9C2D900F7500DCA8E0 /* SourceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceExtension.entitlements; sourceTree = "<group>"; };
 		0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommunicationBridge; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEAFDAC2D900FF900DCA8E0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = XPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CEAFDC72D90130800DCA8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CEAFDC82D90130800DCA8E0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0CEAFDC92D90130800DCA8E0 /* XPCService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCService.entitlements; sourceTree = "<group>"; };
+		0CEAFDCA2D90130800DCA8E0 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
+		0CEAFDCB2D90130800DCA8E0 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
+		0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bridgeLaunchAgent.plist; sourceTree = "<group>"; };
 		0CF538F22D8DC81A007CE2B5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusObserver.swift; sourceTree = "<group>"; };
 		0CF538F72D8DD0EA007CE2B5 /* PseudoCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoCommandHandler.swift; sourceTree = "<group>"; };
@@ -196,6 +255,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0CEAFDA22D900FF000DCA8E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEAFDB22D90125500DCA8E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,6 +325,7 @@
 				0CDF71142D8C292F002FA8D6 /* Localpilot for Xcode */,
 				0CEAFD9D2D900F7500DCA8E0 /* SourceExtension */,
 				0CEAFDAD2D900FF900DCA8E0 /* CommunicationBridge */,
+				0CEAFDCC2D90130800DCA8E0 /* XPCService */,
 				0CEAFD852D900F5C00DCA8E0 /* Frameworks */,
 				0C44BFCA2D8B8DD500BE2B53 /* Products */,
 			);
@@ -270,6 +337,7 @@
 				0C44BFC92D8B8DD500BE2B53 /* Localpilot for Xcode.app */,
 				0CEAFD842D900F5C00DCA8E0 /* SourceExtension.appex */,
 				0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */,
+				0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,6 +397,7 @@
 				0CDF71102D8C292F002FA8D6 /* Config.dev.xcconfig */,
 				0CDF71112D8C292F002FA8D6 /* ContentView.swift */,
 				0CDF71122D8C292F002FA8D6 /* Info.plist */,
+				0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */,
 				0CDF71132D8C292F002FA8D6 /* Localpilot_for_Xcode.entitlements */,
 			);
 			path = "Localpilot for Xcode";
@@ -382,6 +451,18 @@
 			path = CommunicationBridge;
 			sourceTree = "<group>";
 		};
+		0CEAFDCC2D90130800DCA8E0 /* XPCService */ = {
+			isa = PBXGroup;
+			children = (
+				0CEAFDC72D90130800DCA8E0 /* Info.plist */,
+				0CEAFDC82D90130800DCA8E0 /* main.swift */,
+				0CEAFDC92D90130800DCA8E0 /* XPCService.entitlements */,
+				0CEAFDCA2D90130800DCA8E0 /* XPCService.swift */,
+				0CEAFDCB2D90130800DCA8E0 /* XPCServiceProtocol.swift */,
+			);
+			path = XPCService;
+			sourceTree = "<group>";
+		};
 		0CF538F42D8DC81A007CE2B5 /* Status */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,11 +504,16 @@
 				0C44BFC62D8B8DD500BE2B53 /* Frameworks */,
 				0C44BFC72D8B8DD500BE2B53 /* Resources */,
 				0CEAFD942D900F5C00DCA8E0 /* Embed Foundation Extensions */,
+				0CEAFDC12D90125500DCA8E0 /* Embed XPC Services */,
+				0CEAFDD12D90143700DCA8E0 /* Embed Helpers */,
+				0CEAFDD52D9014D400DCA8E0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0CEAFDB02D9011C400DCA8E0 /* PBXTargetDependency */,
 				0CEAFD922D900F5C00DCA8E0 /* PBXTargetDependency */,
+				0CEAFDC02D90125500DCA8E0 /* PBXTargetDependency */,
 			);
 			name = "Localpilot for Xcode";
 			packageProductDependencies = (
@@ -479,6 +565,25 @@
 			productReference = 0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */;
 			productType = "com.apple.product-type.tool";
 		};
+		0CEAFDB42D90125500DCA8E0 /* XPCService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CEAFDC42D90125500DCA8E0 /* Build configuration list for PBXNativeTarget "XPCService" */;
+			buildPhases = (
+				0CEAFDB12D90125500DCA8E0 /* Sources */,
+				0CEAFDB22D90125500DCA8E0 /* Frameworks */,
+				0CEAFDB32D90125500DCA8E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XPCService;
+			packageProductDependencies = (
+			);
+			productName = XPCService;
+			productReference = 0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -496,6 +601,9 @@
 						CreatedOnToolsVersion = 16.2;
 					};
 					0CEAFDA42D900FF000DCA8E0 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					0CEAFDB42D90125500DCA8E0 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -524,6 +632,7 @@
 				0C44BFC82D8B8DD500BE2B53 /* Localpilot for Xcode */,
 				0CEAFD832D900F5C00DCA8E0 /* SourceExtension */,
 				0CEAFDA42D900FF000DCA8E0 /* CommunicationBridge */,
+				0CEAFDB42D90125500DCA8E0 /* XPCService */,
 			);
 		};
 /* End PBXProject section */
@@ -541,6 +650,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0CEAFD822D900F5C00DCA8E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEAFDB32D90125500DCA8E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -622,6 +738,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CEAFDB12D90125500DCA8E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CEAFDCD2D90130800DCA8E0 /* main.swift in Sources */,
+				0CEAFDCE2D90130800DCA8E0 /* XPCService.swift in Sources */,
+				0CEAFDCF2D90130800DCA8E0 /* XPCServiceProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -629,6 +755,16 @@
 			isa = PBXTargetDependency;
 			target = 0CEAFD832D900F5C00DCA8E0 /* SourceExtension */;
 			targetProxy = 0CEAFD912D900F5C00DCA8E0 /* PBXContainerItemProxy */;
+		};
+		0CEAFDB02D9011C400DCA8E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CEAFDA42D900FF000DCA8E0 /* CommunicationBridge */;
+			targetProxy = 0CEAFDAF2D9011C400DCA8E0 /* PBXContainerItemProxy */;
+		};
+		0CEAFDC02D90125500DCA8E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CEAFDB42D90125500DCA8E0 /* XPCService */;
+			targetProxy = 0CEAFDBF2D90125500DCA8E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -829,7 +965,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_BASE).SourceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -857,7 +993,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_BASE).SourceExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -873,7 +1009,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 669J55BPZE;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_BASE).CommunicationBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -886,9 +1022,55 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 669J55BPZE;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_BASE).CommunicationBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0CEAFDC52D90125500DCA8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XPCService/XPCService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 669J55BPZE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XPCService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XPCService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_BASE).XPCService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0CEAFDC62D90125500DCA8E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = XPCService/XPCService.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 669J55BPZE;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XPCService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = XPCService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_IDENTIFIER_BASE).XPCService";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -928,6 +1110,15 @@
 			buildConfigurations = (
 				0CEAFDAA2D900FF000DCA8E0 /* Debug */,
 				0CEAFDAB2D900FF000DCA8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CEAFDC42D90125500DCA8E0 /* Build configuration list for PBXNativeTarget "XPCService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CEAFDC52D90125500DCA8E0 /* Debug */,
+				0CEAFDC62D90125500DCA8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
