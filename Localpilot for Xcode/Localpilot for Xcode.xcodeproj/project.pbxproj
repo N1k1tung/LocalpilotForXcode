@@ -70,7 +70,6 @@
 		0CEAFDD22D90146200DCA8E0 /* CommunicationBridge in Embed Helpers */ = {isa = PBXBuildFile; fileRef = 0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0CEAFDD62D9014EA00DCA8E0 /* bridgeLaunchAgent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */; };
 		0CEAFDD72D90177C00DCA8E0 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */; };
-		0CEAFDD82D90177C00DCA8E0 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62462D8F2ED00026F288 /* XPCService.swift */; };
 		0CEAFDD92D90181A00DCA8E0 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62422D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift */; };
 		0CEAFDDD2D9018A000DCA8E0 /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDDC2D9018A000DCA8E0 /* ServiceDelegate.swift */; };
 		0CEAFDDE2D90195200DCA8E0 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A622E2D8EF9980026F288 /* Logs.swift */; };
@@ -78,6 +77,58 @@
 		0CEAFDE22D901A1300DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
 		0CEAFDE32D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
 		0CEAFDE42D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
+		0CEAFDE62D901CAF00DCA8E0 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE52D901CAF00DCA8E0 /* XPCService.swift */; };
+		0CEAFDE72D901CD500DCA8E0 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F22D8DC81A007CE2B5 /* Status.swift */; };
+		0CEAFDE92D901D2500DCA8E0 /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFDE82D901D2500DCA8E0 /* LanguageServerProtocol */; };
+		0CEAFDEA2D901D3700DCA8E0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62212D8EC86A0026F288 /* Service.swift */; };
+		0CEAFDEB2D901DD000DCA8E0 /* ScheduledCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62352D8F0F6E0026F288 /* ScheduledCleaner.swift */; };
+		0CEAFDED2D901DD000DCA8E0 /* SuggestionServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62532D8F325B0026F288 /* SuggestionServiceProvider.swift */; };
+		0CEAFDEE2D901DD000DCA8E0 /* Workspace+Cleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62372D8F0FB00026F288 /* Workspace+Cleanup.swift */; };
+		0CEAFDEF2D901DD000DCA8E0 /* SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62512D8F317D0026F288 /* SuggestionService.swift */; };
+		0CEAFDF02D901DE100DCA8E0 /* TabToAcceptSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62272D8EE31F0026F288 /* TabToAcceptSuggestion.swift */; };
+		0CEAFDF12D901DE100DCA8E0 /* KeyBindingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62262D8EE31F0026F288 /* KeyBindingManager.swift */; };
+		0CEAFDF22D901DEA00DCA8E0 /* OpenedFileRocoverableStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62182D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift */; };
+		0CEAFDF32D901DEA00DCA8E0 /* WorkspacePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A621A2D8EC7F10026F288 /* WorkspacePool.swift */; };
+		0CEAFDF42D901DEA00DCA8E0 /* NSWorkspaceExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538FF2D8DD1CE007CE2B5 /* NSWorkspaceExt.swift */; };
+		0CEAFDF52D901DEA00DCA8E0 /* Filespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62172D8EC7F10026F288 /* Filespace.swift */; };
+		0CEAFDF62D901DEA00DCA8E0 /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62192D8EC7F10026F288 /* Workspace.swift */; };
+		0CEAFDF72D901DEA00DCA8E0 /* FileSaveWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */; };
+		0CEAFDF82D901DF500DCA8E0 /* SuggestionWorkspacePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623B2D8F10020026F288 /* SuggestionWorkspacePlugin.swift */; };
+		0CEAFDF92D901DF500DCA8E0 /* LineEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623A2D8F10020026F288 /* LineEdit.swift */; };
+		0CEAFDFA2D901DF500DCA8E0 /* Filespace+SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62392D8F10020026F288 /* Filespace+SuggestionService.swift */; };
+		0CEAFDFB2D901DF500DCA8E0 /* Workspace+SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A623C2D8F10020026F288 /* Workspace+SuggestionService.swift */; };
+		0CEAFDFC2D901DFC00DCA8E0 /* String+LineEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875C2D8CB1D4002ABF1D /* String+LineEnding.swift */; };
+		0CEAFDFD2D901DFC00DCA8E0 /* CodeSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87572D8CB1D4002ABF1D /* CodeSuggestion.swift */; };
+		0CEAFDFE2D901DFC00DCA8E0 /* LanguageIdentifierFromFilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875A2D8CB1D4002ABF1D /* LanguageIdentifierFromFilePath.swift */; };
+		0CEAFDFF2D901DFC00DCA8E0 /* ExportedFromLSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87592D8CB1D4002ABF1D /* ExportedFromLSP.swift */; };
+		0CEAFE002D901DFC00DCA8E0 /* EditorInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87582D8CB1D4002ABF1D /* EditorInformation.swift */; };
+		0CEAFE012D901DFC00DCA8E0 /* Modification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875B2D8CB1D4002ABF1D /* Modification.swift */; };
+		0CEAFE022D901E2600DCA8E0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62432D8F2ED00026F288 /* Models.swift */; };
+		0CEAFE042D901E6200DCA8E0 /* SuggestionCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE032D901E6200DCA8E0 /* SuggestionCommandHandler.swift */; };
+		0CEAFE052D901E6F00DCA8E0 /* SuggestionCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE032D901E6200DCA8E0 /* SuggestionCommandHandler.swift */; };
+		0CEAFE072D901FE700DCA8E0 /* WindowBaseCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE062D901FE700DCA8E0 /* WindowBaseCommandHandler.swift */; };
+		0CEAFE082D901FE700DCA8E0 /* WindowBaseCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE062D901FE700DCA8E0 /* WindowBaseCommandHandler.swift */; };
+		0CEAFE0A2D901FE900DCA8E0 /* SuggestionInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE092D901FE900DCA8E0 /* SuggestionInjector.swift */; };
+		0CEAFE0B2D901FE900DCA8E0 /* SuggestionInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE092D901FE900DCA8E0 /* SuggestionInjector.swift */; };
+		0CEAFE0C2D90213100DCA8E0 /* XcodeInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711D2D8C29CF002FA8D6 /* XcodeInspector.swift */; };
+		0CEAFE0D2D90213100DCA8E0 /* SourceEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87462D8CAF31002ABF1D /* SourceEditor.swift */; };
+		0CEAFE0E2D90213100DCA8E0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87452D8CAF31002ABF1D /* Helpers.swift */; };
+		0CEAFE0F2D90213100DCA8E0 /* AppInstanceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87432D8CAF31002ABF1D /* AppInstanceInspector.swift */; };
+		0CEAFE102D90213100DCA8E0 /* XcodeWindowInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87482D8CAF31002ABF1D /* XcodeWindowInspector.swift */; };
+		0CEAFE112D90216100DCA8E0 /* RealtimeSuggestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */; };
+		0CEAFE122D90218900DCA8E0 /* XcodeAppInstanceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */; };
+		0CEAFE132D90219000DCA8E0 /* ActiveApplicationMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62302D8EFA020026F288 /* ActiveApplicationMonitor.swift */; };
+		0CEAFE142D90219900DCA8E0 /* PseudoCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F72D8DD0EA007CE2B5 /* PseudoCommandHandler.swift */; };
+		0CEAFE152D90222700DCA8E0 /* AXUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF71212D8C2AB4002FA8D6 /* AXUIElement.swift */; };
+		0CEAFE162D90224500DCA8E0 /* XcodeInspector+TriggerCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87472D8CAF31002ABF1D /* XcodeInspector+TriggerCommand.swift */; };
+		0CEAFE182D9022EF00DCA8E0 /* NSErrorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE172D9022EF00DCA8E0 /* NSErrorExt.swift */; };
+		0CEAFE1B2D9025FD00DCA8E0 /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE1A2D9025FD00DCA8E0 /* AsyncAlgorithms */; };
+		0CEAFE1C2D90260B00DCA8E0 /* AsyncPassthroughSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87512D8CB05A002ABF1D /* AsyncPassthroughSubject.swift */; };
+		0CEAFE1D2D90261F00DCA8E0 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */; };
+		0CEAFE1E2D90262D00DCA8E0 /* AXNotificationStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87542D8CB07D002ABF1D /* AXNotificationStream.swift */; };
+		0CEAFE202D90264500DCA8E0 /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE1F2D90264500DCA8E0 /* Parsing */; };
+		0CEAFE222D90264500DCA8E0 /* CGEventOverride in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE212D90264500DCA8E0 /* CGEventOverride */; };
+		0CEAFE242D90264500DCA8E0 /* CombineBinding in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE232D90264500DCA8E0 /* CombineBinding */; };
 		0CF538F12D8DC7CF007CE2B5 /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */; };
 		0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F22D8DC81A007CE2B5 /* Status.swift */; };
 		0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */; };
@@ -233,6 +284,11 @@
 		0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bridgeLaunchAgent.plist; sourceTree = "<group>"; };
 		0CEAFDDC2D9018A000DCA8E0 /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceGlobals.swift; sourceTree = "<group>"; };
+		0CEAFDE52D901CAF00DCA8E0 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
+		0CEAFE032D901E6200DCA8E0 /* SuggestionCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCommandHandler.swift; sourceTree = "<group>"; };
+		0CEAFE062D901FE700DCA8E0 /* WindowBaseCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowBaseCommandHandler.swift; sourceTree = "<group>"; };
+		0CEAFE092D901FE900DCA8E0 /* SuggestionInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionInjector.swift; sourceTree = "<group>"; };
+		0CEAFE172D9022EF00DCA8E0 /* NSErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExt.swift; sourceTree = "<group>"; };
 		0CF538F22D8DC81A007CE2B5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusObserver.swift; sourceTree = "<group>"; };
 		0CF538F72D8DD0EA007CE2B5 /* PseudoCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoCommandHandler.swift; sourceTree = "<group>"; };
@@ -272,6 +328,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEAFE202D90264500DCA8E0 /* Parsing in Frameworks */,
+				0CEAFDE92D901D2500DCA8E0 /* LanguageServerProtocol in Frameworks */,
+				0CEAFE242D90264500DCA8E0 /* CombineBinding in Frameworks */,
+				0CEAFE1B2D9025FD00DCA8E0 /* AsyncAlgorithms in Frameworks */,
+				0CEAFE222D90264500DCA8E0 /* CGEventOverride in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +444,7 @@
 				0CAD875A2D8CB1D4002ABF1D /* LanguageIdentifierFromFilePath.swift */,
 				0CAD875B2D8CB1D4002ABF1D /* Modification.swift */,
 				0CAD875C2D8CB1D4002ABF1D /* String+LineEnding.swift */,
+				0CEAFE092D901FE900DCA8E0 /* SuggestionInjector.swift */,
 			);
 			path = SuggestionBasic;
 			sourceTree = "<group>";
@@ -465,6 +527,8 @@
 			children = (
 				0CEAFDC72D90130800DCA8E0 /* Info.plist */,
 				0CEAFDC82D90130800DCA8E0 /* main.swift */,
+				0CEAFDE52D901CAF00DCA8E0 /* XPCService.swift */,
+				0CEAFE172D9022EF00DCA8E0 /* NSErrorExt.swift */,
 				0CEAFDC92D90130800DCA8E0 /* XPCService.entitlements */,
 			);
 			path = XPCService;
@@ -482,7 +546,9 @@
 		0CF538FA2D8DD0EA007CE2B5 /* SuggestionCommandHandler */ = {
 			isa = PBXGroup;
 			children = (
+				0CEAFE032D901E6200DCA8E0 /* SuggestionCommandHandler.swift */,
 				0CF538F72D8DD0EA007CE2B5 /* PseudoCommandHandler.swift */,
+				0CEAFE062D901FE700DCA8E0 /* WindowBaseCommandHandler.swift */,
 			);
 			path = SuggestionCommandHandler;
 			sourceTree = "<group>";
@@ -586,6 +652,11 @@
 			);
 			name = XPCService;
 			packageProductDependencies = (
+				0CEAFDE82D901D2500DCA8E0 /* LanguageServerProtocol */,
+				0CEAFE1A2D9025FD00DCA8E0 /* AsyncAlgorithms */,
+				0CEAFE1F2D90264500DCA8E0 /* Parsing */,
+				0CEAFE212D90264500DCA8E0 /* CGEventOverride */,
+				0CEAFE232D90264500DCA8E0 /* CombineBinding */,
 			);
 			productName = XPCService;
 			productReference = 0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */;
@@ -713,12 +784,15 @@
 				0C1A621C2D8EC7F10026F288 /* FileSaveWatcher.swift in Sources */,
 				0C1A621D2D8EC7F10026F288 /* Filespace.swift in Sources */,
 				0C1A621E2D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift in Sources */,
+				0CEAFE042D901E6200DCA8E0 /* SuggestionCommandHandler.swift in Sources */,
 				0C1A62522D8F317D0026F288 /* SuggestionService.swift in Sources */,
 				0C1A621F2D8EC7F10026F288 /* Workspace.swift in Sources */,
 				0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */,
 				0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */,
+				0CEAFE0A2D901FE900DCA8E0 /* SuggestionInjector.swift in Sources */,
 				0CAD874E2D8CAF31002ABF1D /* SourceEditor.swift in Sources */,
 				0C1A62382D8F0FB00026F288 /* Workspace+Cleanup.swift in Sources */,
+				0CEAFE072D901FE700DCA8E0 /* WindowBaseCommandHandler.swift in Sources */,
 				0CAD874F2D8CAF31002ABF1D /* AppInstanceInspector.swift in Sources */,
 				0C1A622F2D8EF99B0026F288 /* Logs.swift in Sources */,
 				0CDF711B2D8C292F002FA8D6 /* ContentView.swift in Sources */,
@@ -755,10 +829,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEAFDD72D90177C00DCA8E0 /* XPCServiceProtocol.swift in Sources */,
-				0CEAFDD82D90177C00DCA8E0 /* XPCService.swift in Sources */,
+				0CEAFDEA2D901D3700DCA8E0 /* Service.swift in Sources */,
+				0CEAFE142D90219900DCA8E0 /* PseudoCommandHandler.swift in Sources */,
+				0CEAFE162D90224500DCA8E0 /* XcodeInspector+TriggerCommand.swift in Sources */,
+				0CEAFE132D90219000DCA8E0 /* ActiveApplicationMonitor.swift in Sources */,
+				0CEAFDE72D901CD500DCA8E0 /* Status.swift in Sources */,
 				0CEAFDE42D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */,
 				0CEAFDDF2D90195200DCA8E0 /* Logs.swift in Sources */,
+				0CEAFE1D2D90261F00DCA8E0 /* UserDefaultsKey.swift in Sources */,
+				0CEAFDF82D901DF500DCA8E0 /* SuggestionWorkspacePlugin.swift in Sources */,
+				0CEAFDF92D901DF500DCA8E0 /* LineEdit.swift in Sources */,
+				0CEAFDFA2D901DF500DCA8E0 /* Filespace+SuggestionService.swift in Sources */,
+				0CEAFE082D901FE700DCA8E0 /* WindowBaseCommandHandler.swift in Sources */,
+				0CEAFDFB2D901DF500DCA8E0 /* Workspace+SuggestionService.swift in Sources */,
 				0CEAFDCD2D90130800DCA8E0 /* main.swift in Sources */,
+				0CEAFE022D901E2600DCA8E0 /* Models.swift in Sources */,
+				0CEAFDE62D901CAF00DCA8E0 /* XPCService.swift in Sources */,
+				0CEAFE1E2D90262D00DCA8E0 /* AXNotificationStream.swift in Sources */,
+				0CEAFE0C2D90213100DCA8E0 /* XcodeInspector.swift in Sources */,
+				0CEAFE152D90222700DCA8E0 /* AXUIElement.swift in Sources */,
+				0CEAFE0D2D90213100DCA8E0 /* SourceEditor.swift in Sources */,
+				0CEAFE0E2D90213100DCA8E0 /* Helpers.swift in Sources */,
+				0CEAFE0F2D90213100DCA8E0 /* AppInstanceInspector.swift in Sources */,
+				0CEAFE102D90213100DCA8E0 /* XcodeWindowInspector.swift in Sources */,
+				0CEAFE1C2D90260B00DCA8E0 /* AsyncPassthroughSubject.swift in Sources */,
+				0CEAFDF22D901DEA00DCA8E0 /* OpenedFileRocoverableStorage.swift in Sources */,
+				0CEAFDF32D901DEA00DCA8E0 /* WorkspacePool.swift in Sources */,
+				0CEAFDF42D901DEA00DCA8E0 /* NSWorkspaceExt.swift in Sources */,
+				0CEAFDF52D901DEA00DCA8E0 /* Filespace.swift in Sources */,
+				0CEAFE182D9022EF00DCA8E0 /* NSErrorExt.swift in Sources */,
+				0CEAFDF62D901DEA00DCA8E0 /* Workspace.swift in Sources */,
+				0CEAFE052D901E6F00DCA8E0 /* SuggestionCommandHandler.swift in Sources */,
+				0CEAFDF72D901DEA00DCA8E0 /* FileSaveWatcher.swift in Sources */,
+				0CEAFE0B2D901FE900DCA8E0 /* SuggestionInjector.swift in Sources */,
+				0CEAFDEB2D901DD000DCA8E0 /* ScheduledCleaner.swift in Sources */,
+				0CEAFE112D90216100DCA8E0 /* RealtimeSuggestionController.swift in Sources */,
+				0CEAFDF02D901DE100DCA8E0 /* TabToAcceptSuggestion.swift in Sources */,
+				0CEAFDFC2D901DFC00DCA8E0 /* String+LineEnding.swift in Sources */,
+				0CEAFDFD2D901DFC00DCA8E0 /* CodeSuggestion.swift in Sources */,
+				0CEAFDFE2D901DFC00DCA8E0 /* LanguageIdentifierFromFilePath.swift in Sources */,
+				0CEAFDFF2D901DFC00DCA8E0 /* ExportedFromLSP.swift in Sources */,
+				0CEAFE002D901DFC00DCA8E0 /* EditorInformation.swift in Sources */,
+				0CEAFE012D901DFC00DCA8E0 /* Modification.swift in Sources */,
+				0CEAFDF12D901DE100DCA8E0 /* KeyBindingManager.swift in Sources */,
+				0CEAFDED2D901DD000DCA8E0 /* SuggestionServiceProvider.swift in Sources */,
+				0CEAFE122D90218900DCA8E0 /* XcodeAppInstanceInspector.swift in Sources */,
+				0CEAFDEE2D901DD000DCA8E0 /* Workspace+Cleanup.swift in Sources */,
+				0CEAFDEF2D901DD000DCA8E0 /* SuggestionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1202,6 +1319,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0CAD873D2D8CAE8B002ABF1D /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
 			productName = AsyncAlgorithms;
+		};
+		0CEAFDE82D901D2500DCA8E0 /* LanguageServerProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CF538EF2D8DC7CF007CE2B5 /* XCRemoteSwiftPackageReference "LanguageServerProtocol" */;
+			productName = LanguageServerProtocol;
+		};
+		0CEAFE1A2D9025FD00DCA8E0 /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CAD873D2D8CAE8B002ABF1D /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
+		};
+		0CEAFE1F2D90264500DCA8E0 /* Parsing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C1A62082D8EC6380026F288 /* XCRemoteSwiftPackageReference "swift-parsing" */;
+			productName = Parsing;
+		};
+		0CEAFE212D90264500DCA8E0 /* CGEventOverride */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C1A62232D8EE2970026F288 /* XCRemoteSwiftPackageReference "CGEventOverride" */;
+			productName = CGEventOverride;
+		};
+		0CEAFE232D90264500DCA8E0 /* CombineBinding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C1A622B2D8EE3DA0026F288 /* XCRemoteSwiftPackageReference "CombineBinding" */;
+			productName = CombineBinding;
 		};
 		0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */ = {
 			isa = XCSwiftPackageProductDependency;

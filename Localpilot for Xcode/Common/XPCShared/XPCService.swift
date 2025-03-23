@@ -1,6 +1,6 @@
 import Foundation
 
-class XPCService {
+fileprivate class BaseXPCService {
     enum Kind {
         case machService(identifier: String)
         case anonymous(endpoint: NSXPCListenerEndpoint)
@@ -104,21 +104,4 @@ struct AutoFinishContinuation<T> {
             continuation.finish(throwing: error)
         }
     }
-}
-
-@XPCServiceActor
-func g_withXPCServiceConnected<T, P>(
-    connection: NSXPCConnection,
-    _ fn: @escaping (P, AutoFinishContinuation<T>) -> Void
-) async throws -> T {
-    let stream: AsyncThrowingStream<T, Error> = AsyncThrowingStream { continuation in
-        let service = connection.remoteObjectProxyWithErrorHandler {
-            continuation.finish(throwing: $0)
-        } as! P
-        fn(service, .init(continuation: continuation))
-    }
-    for try await result in stream {
-        return result
-    }
-    throw XPCExtensionServiceError.failedToCreateXPCConnection
 }

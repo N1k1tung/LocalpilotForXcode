@@ -19,7 +19,7 @@ public enum XPCExtensionServiceError: Swift.Error, LocalizedError {
 
 public class XPCExtensionService {
     @XPCServiceActor
-    var service: XPCService?
+    var service: BaseXPCService?
     @XPCServiceActor
     var connection: NSXPCConnection? { service?.connection }
     let bridge: XPCCommunicationBridge
@@ -111,19 +111,6 @@ public class XPCExtensionService {
             editorContent,
             { $0.getRealtimeSuggestedCode }
         )
-    }
-
-    public func toggleRealtimeSuggestion() async throws {
-        try await withXPCServiceConnected {
-            service, continuation in
-            service.toggleRealtimeSuggestion { error in
-                if let error {
-                    continuation.reject(error)
-                    return
-                }
-                continuation.resume(())
-            }
-        } as Void
     }
 
     public func prefetchRealtimeSuggestions(editorContent: EditorContent) async {
@@ -291,3 +278,19 @@ extension XPCExtensionService {
     }
 }
 
+@XPCServiceActor
+func g_withXPCServiceConnected<T, P>(
+    connection: NSXPCConnection,
+    _ fn: @escaping (P, AutoFinishContinuation<T>) -> Void
+) async throws -> T {
+    let stream: AsyncThrowingStream<T, Error> = AsyncThrowingStream { continuation in
+        let service = connection.remoteObjectProxyWithErrorHandler {
+            continuation.finish(throwing: $0)
+        } as! P
+        fn(service, .init(continuation: continuation))
+    }
+    for try await result in stream {
+        return result
+    }
+    throw XPCExtensionServiceError.failedToCreateXPCConnection
+}
