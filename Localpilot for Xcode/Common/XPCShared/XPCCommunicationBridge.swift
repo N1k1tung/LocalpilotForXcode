@@ -15,14 +15,14 @@ public enum XPCCommunicationBridgeError: Swift.Error, LocalizedError {
 }
 
 public class XPCCommunicationBridge {
-    let service: XPCService
+    let service: BaseXPCService
     @XPCServiceActor
     var serviceEndpoint: NSXPCListenerEndpoint?
 
     public init() {
         service = .init(
             kind: .machService(
-                identifier: Bundle(for: XPCService.self)
+                identifier: Bundle(for: BaseXPCService.self)
                     .object(forInfoDictionaryKey: "BUNDLE_IDENTIFIER_BASE") as! String +
                     ".CommunicationBridge"
             ),

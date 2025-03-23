@@ -1,6 +1,6 @@
 import Foundation
 
-fileprivate class BaseXPCService {
+class BaseXPCService {
     enum Kind {
         case machService(identifier: String)
         case anonymous(endpoint: NSXPCListenerEndpoint)

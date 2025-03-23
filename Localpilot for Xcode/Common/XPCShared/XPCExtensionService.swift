@@ -200,7 +200,7 @@ extension XPCExtensionService: XPCServiceDelegate {
 extension XPCExtensionService {
     @XPCServiceActor
     private func updateEndpoint(_ endpoint: NSXPCListenerEndpoint) {
-        service = XPCService(
+        service = BaseXPCService(
             kind: .anonymous(endpoint: endpoint),
             interface: NSXPCInterface(with: XPCServiceProtocol.self),
             delegate: self

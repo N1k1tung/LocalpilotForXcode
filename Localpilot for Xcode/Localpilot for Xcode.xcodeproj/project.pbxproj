@@ -62,7 +62,6 @@
 		0CEAFD872D900F5C00DCA8E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEAFD862D900F5C00DCA8E0 /* Cocoa.framework */; };
 		0CEAFD892D900F5C00DCA8E0 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEAFD882D900F5C00DCA8E0 /* XcodeKit.framework */; };
 		0CEAFD932D900F5C00DCA8E0 /* SourceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0CEAFD842D900F5C00DCA8E0 /* SourceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		0CEAFD9E2D900F7500DCA8E0 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFD9A2D900F7500DCA8E0 /* SourceEditorCommand.swift */; };
 		0CEAFD9F2D900F7500DCA8E0 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFD9B2D900F7500DCA8E0 /* SourceEditorExtension.swift */; };
 		0CEAFDAE2D900FF900DCA8E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDAC2D900FF900DCA8E0 /* main.swift */; };
 		0CEAFDC22D90125500DCA8E0 /* XPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -129,6 +128,27 @@
 		0CEAFE202D90264500DCA8E0 /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE1F2D90264500DCA8E0 /* Parsing */; };
 		0CEAFE222D90264500DCA8E0 /* CGEventOverride in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE212D90264500DCA8E0 /* CGEventOverride */; };
 		0CEAFE242D90264500DCA8E0 /* CombineBinding in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE232D90264500DCA8E0 /* CombineBinding */; };
+		0CEAFE252D9029C200DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
+		0CEAFE262D9029C200DCA8E0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62432D8F2ED00026F288 /* Models.swift */; };
+		0CEAFE272D9029C200DCA8E0 /* XPCCommunicationBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62442D8F2ED00026F288 /* XPCCommunicationBridge.swift */; };
+		0CEAFE282D9029C200DCA8E0 /* XPCExtensionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62452D8F2ED00026F288 /* XPCExtensionService.swift */; };
+		0CEAFE292D9029C200DCA8E0 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62462D8F2ED00026F288 /* XPCService.swift */; };
+		0CEAFE2C2D9029F300DCA8E0 /* GetSuggestionsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE2A2D9029F300DCA8E0 /* GetSuggestionsCommand.swift */; };
+		0CEAFE2D2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE2B2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift */; };
+		0CEAFE2F2D902A0100DCA8E0 /* SourceExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE2E2D902A0100DCA8E0 /* SourceExtensionHelpers.swift */; };
+		0CEAFE302D902A1800DCA8E0 /* ExportedFromLSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87592D8CB1D4002ABF1D /* ExportedFromLSP.swift */; };
+		0CEAFE312D902A1800DCA8E0 /* LanguageIdentifierFromFilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875A2D8CB1D4002ABF1D /* LanguageIdentifierFromFilePath.swift */; };
+		0CEAFE322D902A1800DCA8E0 /* String+LineEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875C2D8CB1D4002ABF1D /* String+LineEnding.swift */; };
+		0CEAFE332D902A1800DCA8E0 /* Modification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875B2D8CB1D4002ABF1D /* Modification.swift */; };
+		0CEAFE342D902A1800DCA8E0 /* EditorInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87582D8CB1D4002ABF1D /* EditorInformation.swift */; };
+		0CEAFE352D902A1800DCA8E0 /* CodeSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87572D8CB1D4002ABF1D /* CodeSuggestion.swift */; };
+		0CEAFE372D902A3B00DCA8E0 /* RejectSuggestionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE362D902A3B00DCA8E0 /* RejectSuggestionCommand.swift */; };
+		0CEAFE392D902A5900DCA8E0 /* CustomCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFE382D902A5900DCA8E0 /* CustomCommand.swift */; };
+		0CEAFE3A2D902B6300DCA8E0 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */; };
+		0CEAFE3B2D902B6D00DCA8E0 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F22D8DC81A007CE2B5 /* Status.swift */; };
+		0CEAFE3C2D902B9500DCA8E0 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62422D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift */; };
+		0CEAFE3E2D902DF300DCA8E0 /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE3D2D902DF300DCA8E0 /* LanguageServerProtocol */; };
+		0CEAFE402D902DF300DCA8E0 /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 0CEAFE3F2D902DF300DCA8E0 /* Parsing */; };
 		0CF538F12D8DC7CF007CE2B5 /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */; };
 		0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F22D8DC81A007CE2B5 /* Status.swift */; };
 		0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */; };
@@ -272,7 +292,6 @@
 		0CEAFD862D900F5C00DCA8E0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		0CEAFD882D900F5C00DCA8E0 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		0CEAFD992D900F7500DCA8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CEAFD9A2D900F7500DCA8E0 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		0CEAFD9B2D900F7500DCA8E0 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		0CEAFD9C2D900F7500DCA8E0 /* SourceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceExtension.entitlements; sourceTree = "<group>"; };
 		0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommunicationBridge; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,6 +308,11 @@
 		0CEAFE062D901FE700DCA8E0 /* WindowBaseCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowBaseCommandHandler.swift; sourceTree = "<group>"; };
 		0CEAFE092D901FE900DCA8E0 /* SuggestionInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionInjector.swift; sourceTree = "<group>"; };
 		0CEAFE172D9022EF00DCA8E0 /* NSErrorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorExt.swift; sourceTree = "<group>"; };
+		0CEAFE2A2D9029F300DCA8E0 /* GetSuggestionsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSuggestionsCommand.swift; sourceTree = "<group>"; };
+		0CEAFE2B2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptSuggestionCommand.swift; sourceTree = "<group>"; };
+		0CEAFE2E2D902A0100DCA8E0 /* SourceExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceExtensionHelpers.swift; sourceTree = "<group>"; };
+		0CEAFE362D902A3B00DCA8E0 /* RejectSuggestionCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectSuggestionCommand.swift; sourceTree = "<group>"; };
+		0CEAFE382D902A5900DCA8E0 /* CustomCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommand.swift; sourceTree = "<group>"; };
 		0CF538F22D8DC81A007CE2B5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusObserver.swift; sourceTree = "<group>"; };
 		0CF538F72D8DD0EA007CE2B5 /* PseudoCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoCommandHandler.swift; sourceTree = "<group>"; };
@@ -313,7 +337,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEAFD872D900F5C00DCA8E0 /* Cocoa.framework in Frameworks */,
+				0CEAFE3E2D902DF300DCA8E0 /* LanguageServerProtocol in Frameworks */,
 				0CEAFD892D900F5C00DCA8E0 /* XcodeKit.framework in Frameworks */,
+				0CEAFE402D902DF300DCA8E0 /* Parsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,8 +532,12 @@
 			isa = PBXGroup;
 			children = (
 				0CEAFD992D900F7500DCA8E0 /* Info.plist */,
-				0CEAFD9A2D900F7500DCA8E0 /* SourceEditorCommand.swift */,
 				0CEAFD9B2D900F7500DCA8E0 /* SourceEditorExtension.swift */,
+				0CEAFE2E2D902A0100DCA8E0 /* SourceExtensionHelpers.swift */,
+				0CEAFE2A2D9029F300DCA8E0 /* GetSuggestionsCommand.swift */,
+				0CEAFE2B2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift */,
+				0CEAFE362D902A3B00DCA8E0 /* RejectSuggestionCommand.swift */,
+				0CEAFE382D902A5900DCA8E0 /* CustomCommand.swift */,
 				0CEAFD9C2D900F7500DCA8E0 /* SourceExtension.entitlements */,
 			);
 			path = SourceExtension;
@@ -614,6 +644,8 @@
 			);
 			name = SourceExtension;
 			packageProductDependencies = (
+				0CEAFE3D2D902DF300DCA8E0 /* LanguageServerProtocol */,
+				0CEAFE3F2D902DF300DCA8E0 /* Parsing */,
 			);
 			productName = SourceExtension;
 			productReference = 0CEAFD842D900F5C00DCA8E0 /* SourceExtension.appex */;
@@ -807,8 +839,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CEAFD9E2D900F7500DCA8E0 /* SourceEditorCommand.swift in Sources */,
+				0CEAFE252D9029C200DCA8E0 /* XPCServiceGlobals.swift in Sources */,
+				0CEAFE262D9029C200DCA8E0 /* Models.swift in Sources */,
+				0CEAFE2F2D902A0100DCA8E0 /* SourceExtensionHelpers.swift in Sources */,
+				0CEAFE272D9029C200DCA8E0 /* XPCCommunicationBridge.swift in Sources */,
+				0CEAFE282D9029C200DCA8E0 /* XPCExtensionService.swift in Sources */,
+				0CEAFE302D902A1800DCA8E0 /* ExportedFromLSP.swift in Sources */,
+				0CEAFE312D902A1800DCA8E0 /* LanguageIdentifierFromFilePath.swift in Sources */,
+				0CEAFE322D902A1800DCA8E0 /* String+LineEnding.swift in Sources */,
+				0CEAFE332D902A1800DCA8E0 /* Modification.swift in Sources */,
+				0CEAFE342D902A1800DCA8E0 /* EditorInformation.swift in Sources */,
+				0CEAFE392D902A5900DCA8E0 /* CustomCommand.swift in Sources */,
+				0CEAFE352D902A1800DCA8E0 /* CodeSuggestion.swift in Sources */,
+				0CEAFE292D9029C200DCA8E0 /* XPCService.swift in Sources */,
+				0CEAFE3A2D902B6300DCA8E0 /* XPCServiceProtocol.swift in Sources */,
 				0CEAFD9F2D900F7500DCA8E0 /* SourceEditorExtension.swift in Sources */,
+				0CEAFE372D902A3B00DCA8E0 /* RejectSuggestionCommand.swift in Sources */,
+				0CEAFE2C2D9029F300DCA8E0 /* GetSuggestionsCommand.swift in Sources */,
+				0CEAFE3B2D902B6D00DCA8E0 /* Status.swift in Sources */,
+				0CEAFE2D2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift in Sources */,
+				0CEAFE3C2D902B9500DCA8E0 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1344,6 +1394,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0C1A622B2D8EE3DA0026F288 /* XCRemoteSwiftPackageReference "CombineBinding" */;
 			productName = CombineBinding;
+		};
+		0CEAFE3D2D902DF300DCA8E0 /* LanguageServerProtocol */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CF538EF2D8DC7CF007CE2B5 /* XCRemoteSwiftPackageReference "LanguageServerProtocol" */;
+			productName = LanguageServerProtocol;
+		};
+		0CEAFE3F2D902DF300DCA8E0 /* Parsing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C1A62082D8EC6380026F288 /* XCRemoteSwiftPackageReference "swift-parsing" */;
+			productName = Parsing;
 		};
 		0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */ = {
 			isa = XCSwiftPackageProductDependency;
