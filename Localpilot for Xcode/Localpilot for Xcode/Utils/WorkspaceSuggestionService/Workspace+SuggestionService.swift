@@ -92,7 +92,7 @@ public extension Workspace {
     func notifySuggestionShown(fileFileAt fileURL: URL) {
         if let suggestion = filespaces[fileURL]?.presentingSuggestion {
             Task {
-                await gitHubCopilotService?.notifyShown(suggestion)
+//                await gitHubCopilotService?.notifyShown(suggestion)
             }
         }
     }
@@ -148,7 +148,7 @@ public extension Workspace {
         }
 
         Task {
-            await gitHubCopilotService?.notifyAccepted(suggestion, acceptedLength: length)
+//            await gitHubCopilotService?.notifyAccepted(suggestion, acceptedLength: length)
         }
 
         filespaces[fileURL]?.reset()

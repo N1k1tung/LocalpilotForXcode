@@ -1,6 +1,4 @@
 import Foundation
-import Status
-import SuggestionBasic
 
 @objc(XPCServiceProtocol)
 public protocol XPCServiceProtocol {
@@ -25,18 +23,6 @@ public protocol XPCServiceProtocol {
         withReply reply: @escaping (_ updatedContent: Data?, Error?) -> Void
     )
     func getRealtimeSuggestedCode(
-        editorContent: Data,
-        withReply reply: @escaping (Data?, Error?) -> Void
-    )
-    func getPromptToCodeAcceptedCode(
-        editorContent: Data,
-        withReply reply: @escaping (_ updatedContent: Data?, Error?) -> Void
-    )
-    func openChat(
-        editorContent: Data,
-        withReply reply: @escaping (Data?, Error?) -> Void
-    )
-    func promptToCode(
         editorContent: Data,
         withReply reply: @escaping (Data?, Error?) -> Void
     )

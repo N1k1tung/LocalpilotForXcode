@@ -126,35 +126,31 @@ public final class AXNotificationStream: AsyncSequence {
                         pendingRegistrationNames.remove(name)
                         await Status.shared.updateAXStatus(.granted)
                     case .actionUnsupported:
-                        Logger.service.info("AXObserver: Action unsupported: \(name)")
+                        dprint("AXObserver: Action unsupported: \(name)")
                         pendingRegistrationNames.remove(name)
                     case .apiDisabled:
                         if shouldLogAXDisabledEvent { // Avoid keeping log AX disabled too many times
                             shouldLogAXDisabledEvent = false
-                            Logger.service
-                                .error("AXObserver: Accessibility API disabled, will try again later")
+                            print("AXObserver: Accessibility API disabled, will try again later")
                         }
                         retry -= 1
                         await Status.shared.updateAXStatus(.notGranted)
                     case .invalidUIElement:
-                        Logger.service
-                            .info("AXObserver: Invalid UI element, notification name \(name)")
+                        dprint("AXObserver: Invalid UI element, notification name \(name)")
                         pendingRegistrationNames.remove(name)
                     case .invalidUIElementObserver:
-                        Logger.service.info("AXObserver: Invalid UI element observer")
+                        dprint("AXObserver: Invalid UI element observer")
                         pendingRegistrationNames.remove(name)
                     case .cannotComplete:
-                        Logger.service
-                            .info("AXObserver: Failed to observe \(name), will try again later")
+                        dprint("AXObserver: Failed to observe \(name), will try again later")
                     case .notificationUnsupported:
-                        Logger.service.info("AXObserver: Notification unsupported: \(name)")
+                        dprint("AXObserver: Notification unsupported: \(name)")
                         pendingRegistrationNames.remove(name)
                     case .notificationAlreadyRegistered:
-                        Logger.service.info("AXObserver: Notification already registered: \(name)")
+                        dprint("AXObserver: Notification already registered: \(name)")
                         pendingRegistrationNames.remove(name)
                     default:
-                        Logger.service
-                            .info(
+                        dprint(
                                 "AXObserver: Unrecognized error \(e) when registering \(name), will try again later"
                             )
                     }

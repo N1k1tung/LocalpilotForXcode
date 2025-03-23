@@ -1,5 +1,4 @@
 import Foundation
-import SuggestionBasic
 
 /// Represents an edit from a previous state of the document to the current
 /// state when the modified portion of the document is constrained to the

@@ -1,5 +1,4 @@
 import Foundation
-import Logger
 
 @globalActor
 public enum XPCServiceActor {
@@ -15,7 +14,6 @@ class XPCService {
 
     let kind: Kind
     let interface: NSXPCInterface
-    let logger: Logger
     weak var delegate: XPCServiceDelegate?
     
     @XPCServiceActor
@@ -34,12 +32,10 @@ class XPCService {
     init(
         kind: Kind,
         interface: NSXPCInterface,
-        logger: Logger,
         delegate: XPCServiceDelegate? = nil
     ) {
         self.kind = kind
         self.interface = interface
-        self.logger = logger
         self.delegate = delegate
     }
 
@@ -59,7 +55,7 @@ class XPCService {
             }
         }
         connection.interruptionHandler = { [weak self] in
-            self?.logger.info("XPCService interrupted")
+            print("XPCService interrupted")
             Task { [weak self] in
                 await self?.delegate?.connectionDidInterrupt()
             }
@@ -117,7 +113,7 @@ struct AutoFinishContinuation<T> {
 }
 
 @XPCServiceActor
-func withXPCServiceConnected<T, P>(
+func g_withXPCServiceConnected<T, P>(
     connection: NSXPCConnection,
     _ fn: @escaping (P, AutoFinishContinuation<T>) -> Void
 ) async throws -> T {
@@ -134,7 +130,7 @@ func withXPCServiceConnected<T, P>(
 }
 
 @XPCServiceActor
-public func testXPCListenerEndpoint(_ endpoint: NSXPCListenerEndpoint) async -> Bool {
+public func g_testXPCListenerEndpoint(_ endpoint: NSXPCListenerEndpoint) async -> Bool {
     let connection = NSXPCConnection(listenerEndpoint: endpoint)
     defer { connection.invalidate() }
     let stream: AsyncThrowingStream<Void, Error> = AsyncThrowingStream { continuation in

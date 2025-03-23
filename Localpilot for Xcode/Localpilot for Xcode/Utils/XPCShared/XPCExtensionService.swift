@@ -1,6 +1,4 @@
 import Foundation
-import Logger
-import Status
 
 public enum XPCExtensionServiceError: Swift.Error, LocalizedError {
     case failedToGetServiceEndpoint
@@ -24,13 +22,11 @@ public class XPCExtensionService {
     var service: XPCService?
     @XPCServiceActor
     var connection: NSXPCConnection? { service?.connection }
-    let logger: Logger
     let bridge: XPCCommunicationBridge
 
     public nonisolated
-    init(logger: Logger) {
-        self.logger = logger
-        bridge = XPCCommunicationBridge(logger: logger)
+    init() {
+        bridge = XPCCommunicationBridge()
     }
 
     /// Launches the extension service if it's not running, returns true if the service has finished
@@ -117,15 +113,6 @@ public class XPCExtensionService {
         )
     }
 
-    public func getPromptToCodeAcceptedCode(editorContent: EditorContent) async throws
-        -> UpdatedContent?
-    {
-        try await suggestionRequest(
-            editorContent,
-            { $0.getPromptToCodeAcceptedCode }
-        )
-    }
-
     public func toggleRealtimeSuggestion() async throws {
         try await withXPCServiceConnected {
             service, continuation in
@@ -146,20 +133,6 @@ public class XPCExtensionService {
                 continuation.resume(())
             }
         }
-    }
-
-    public func openChat(editorContent: EditorContent) async throws -> UpdatedContent? {
-        try await suggestionRequest(
-            editorContent,
-            { $0.openChat }
-        )
-    }
-
-    public func promptToCode(editorContent: EditorContent) async throws -> UpdatedContent? {
-        try await suggestionRequest(
-            editorContent,
-            { $0.promptToCode }
-        )
     }
 
     public func customCommand(
@@ -243,7 +216,6 @@ extension XPCExtensionService {
         service = XPCService(
             kind: .anonymous(endpoint: endpoint),
             interface: NSXPCInterface(with: XPCServiceProtocol.self),
-            logger: logger,
             delegate: self
         )
     }
@@ -254,7 +226,7 @@ extension XPCExtensionService {
     ) async throws -> T {
         if let service, let connection = service.connection {
             do {
-                return try await XPCShared.withXPCServiceConnected(connection: connection, fn)
+                return try await g_withXPCServiceConnected(connection: connection, fn)
             } catch {
                 throw XPCExtensionServiceError.xpcServiceError(error)
             }
@@ -265,7 +237,7 @@ extension XPCExtensionService {
 
             if let service, let connection = service.connection {
                 do {
-                    return try await XPCShared.withXPCServiceConnected(connection: connection, fn)
+                    return try await g_withXPCServiceConnected(connection: connection, fn)
                 } catch {
                     throw XPCExtensionServiceError.xpcServiceError(error)
                 }
@@ -281,7 +253,7 @@ extension XPCExtensionService {
     ) async throws -> T {
         if let service, let connection = service.connection {
             do {
-                return try await XPCShared.withXPCServiceConnected(connection: connection, fn)
+                return try await g_withXPCServiceConnected(connection: connection, fn)
             } catch {
                 throw XPCExtensionServiceError.xpcServiceError(error)
             }

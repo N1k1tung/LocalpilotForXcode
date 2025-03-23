@@ -78,127 +78,46 @@ public extension AppInstanceInspector {
 
         await Task.yield()
 
-        if UserDefaults.shared.value(for: \.triggerActionWithAccessibilityAPI) {
-            let app = AXUIElementCreateApplication(runningApplication.processIdentifier)
+        let app = AXUIElementCreateApplication(runningApplication.processIdentifier)
 
-            guard let menuBar = app.menuBar else {
-                print("""
+        guard let menuBar = app.menuBar else {
+            print("""
                 Trigger menu item \(sourcePath) failed: \
                 Menu not found.
                 """)
-                throw cantRunCommand("Menu not found.")
-            }
-            var path = path
-            var currentMenu = menuBar
-            while !path.isEmpty {
-                let item = path.removeFirst()
+            throw cantRunCommand("Menu not found.")
+        }
+        var path = path
+        var currentMenu = menuBar
+        while !path.isEmpty {
+            let item = path.removeFirst()
 
-                if path.isEmpty, let button = currentMenu.child(title: item, role: "AXMenuItem") {
-                    let error = AXUIElementPerformAction(button, kAXPressAction as CFString)
-                    if error != AXError.success {
-                        print("""
+            if path.isEmpty, let button = currentMenu.child(title: item, role: "AXMenuItem") {
+                let error = AXUIElementPerformAction(button, kAXPressAction as CFString)
+                if error != AXError.success {
+                    print("""
                         Trigger menu item \(sourcePath) failed: \
                         \(error.localizedDescription)
                         """)
-                        throw cantRunCommand(error.localizedDescription)
-                    } else {
-                        #if DEBUG
-                        Logger.service.info("""
+                    throw cantRunCommand(error.localizedDescription)
+                } else {
+                    dprint("""
                         Trigger menu item \(sourcePath) succeeded.
                         """)
-                        #endif
-                        return
-                    }
-                } else if let menu = currentMenu.child(title: item) {
-                    #if DEBUG
-                    Logger.service.info("""
+                    return
+                }
+            } else if let menu = currentMenu.child(title: item) {
+                dprint("""
                     Trigger menu item \(sourcePath): Move to \(item).
                     """)
-                    #endif
-                    currentMenu = menu
-                } else {
-                    print("""
+                currentMenu = menu
+            } else {
+                print("""
                     Trigger menu item \(sourcePath) failed: \
                     \(item) is not found.
                     """)
-                    throw cantRunCommand("\(item) is not found.")
-                }
-            }
-        } else {
-            let clickTask = {
-                var path = path
-                let button = path.removeLast()
-                let menuBarItem = path.removeFirst()
-                let list = path
-                    .reversed()
-                    .map { "menu 1 of menu item \"\($0)\"" }
-                    .joined(separator: " of ")
-                return """
-                click menu item "\(button)" of \(list) \
-                of menu bar item "\(menuBarItem)" \
-                of menu bar 1
-                """
-            }()
-            /// check if menu is open, if not, click the menu item.
-            let appleScript = """
-            tell application "System Events"
-                set theprocs to every process whose unix id is \
-                \(runningApplication.processIdentifier)
-                repeat with proc in theprocs
-                    tell proc
-                        repeat with theMenu in menus of menu bar 1
-                            set theValue to value of attribute "AXVisibleChildren" of theMenu
-                            if theValue is not {} then
-                                return
-                            end if
-                        end repeat
-                        \(clickTask)
-                    end tell
-                end repeat
-            end tell
-            """
-
-            do {
-                try await runAppleScript(appleScript)
-            } catch {
-                print("""
-                Trigger menu item \(path.joined(separator: "/")) failed: \
-                \(error.localizedDescription)
-                """)
-                throw cantRunCommand(error.localizedDescription)
+                throw cantRunCommand("\(item) is not found.")
             }
         }
     }
 }
-
-@discardableResult
-func runAppleScript(_ appleScript: String) async throws -> String {
-    let task = Process()
-    task.launchPath = "/usr/bin/osascript"
-    task.arguments = ["-e", appleScript]
-    let outpipe = Pipe()
-    task.standardOutput = outpipe
-    task.standardError = Pipe()
-
-    return try await withUnsafeThrowingContinuation { continuation in
-        do {
-            task.terminationHandler = { _ in
-                do {
-                    if let data = try outpipe.fileHandleForReading.readToEnd(),
-                       let content = String(data: data, encoding: .utf8)
-                    {
-                        continuation.resume(returning: content)
-                        return
-                    }
-                    continuation.resume(returning: "")
-                } catch {
-                    continuation.resume(throwing: error)
-                }
-            }
-            try task.run()
-        } catch {
-            continuation.resume(throwing: error)
-        }
-    }
-}
-

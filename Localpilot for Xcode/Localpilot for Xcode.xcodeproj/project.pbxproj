@@ -33,6 +33,8 @@
 		0C1A624C2D8F2ED00026F288 /* XPCCommunicationBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62442D8F2ED00026F288 /* XPCCommunicationBridge.swift */; };
 		0C1A624D2D8F2ED00026F288 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62432D8F2ED00026F288 /* Models.swift */; };
 		0C1A624E2D8F2ED00026F288 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */; };
+		0C1A62522D8F317D0026F288 /* SuggestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62512D8F317D0026F288 /* SuggestionService.swift */; };
+		0C1A62542D8F325B0026F288 /* SuggestionServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62532D8F325B0026F288 /* SuggestionServiceProvider.swift */; };
 		0CAD873F2D8CAE8B002ABF1D /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 0CAD873E2D8CAE8B002ABF1D /* AsyncAlgorithms */; };
 		0CAD87402D8CAF0A002ABF1D /* RealtimeSuggestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */; };
 		0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */; };
@@ -89,6 +91,8 @@
 		0C1A62452D8F2ED00026F288 /* XPCExtensionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCExtensionService.swift; sourceTree = "<group>"; };
 		0C1A62462D8F2ED00026F288 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
 		0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
+		0C1A62512D8F317D0026F288 /* SuggestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionService.swift; sourceTree = "<group>"; };
+		0C1A62532D8F325B0026F288 /* SuggestionServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionServiceProvider.swift; sourceTree = "<group>"; };
 		0C44BFC92D8B8DD500BE2B53 /* Localpilot for Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localpilot for Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CAD87412D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeAppInstanceInspector.swift; sourceTree = "<group>"; };
 		0CAD87432D8CAF31002ABF1D /* AppInstanceInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInstanceInspector.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 		0C1A62202D8EC83E0026F288 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A62532D8F325B0026F288 /* SuggestionServiceProvider.swift */,
+				0C1A62512D8F317D0026F288 /* SuggestionService.swift */,
 				0C1A62212D8EC86A0026F288 /* Service.swift */,
 				0CDF711F2D8C29E8002FA8D6 /* RealtimeSuggestionController.swift */,
 				0C1A62352D8F0F6E0026F288 /* ScheduledCleaner.swift */,
@@ -426,10 +432,12 @@
 				0CAD87632D8CB1D4002ABF1D /* String+LineEnding.swift in Sources */,
 				0CAD874C2D8CAF31002ABF1D /* Helpers.swift in Sources */,
 				0CAD87522D8CB05A002ABF1D /* AsyncPassthroughSubject.swift in Sources */,
+				0C1A62542D8F325B0026F288 /* SuggestionServiceProvider.swift in Sources */,
 				0C1A621B2D8EC7F10026F288 /* WorkspacePool.swift in Sources */,
 				0C1A621C2D8EC7F10026F288 /* FileSaveWatcher.swift in Sources */,
 				0C1A621D2D8EC7F10026F288 /* Filespace.swift in Sources */,
 				0C1A621E2D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift in Sources */,
+				0C1A62522D8F317D0026F288 /* SuggestionService.swift in Sources */,
 				0C1A621F2D8EC7F10026F288 /* Workspace.swift in Sources */,
 				0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */,
 				0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */,
@@ -582,7 +590,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Localpilot for Xcode/Localpilot for Xcode/Info.plist";
+				INFOPLIST_FILE = "Localpilot for Xcode/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -611,7 +619,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Localpilot for Xcode/Localpilot for Xcode/Info.plist";
+				INFOPLIST_FILE = "Localpilot for Xcode/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

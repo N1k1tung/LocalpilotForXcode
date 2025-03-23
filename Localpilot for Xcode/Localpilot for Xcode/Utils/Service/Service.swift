@@ -19,11 +19,11 @@ public final class Service {
     var cancellable = Set<AnyCancellable>()
 
     private init() {
-        var workspacePool = WorkspacePool.shared
+        let workspacePool = WorkspacePool.shared
 
         scheduledCleaner = .init()
         workspacePool.registerPlugin {
-            SuggestionServiceWorkspacePlugin(workspace: $0) { SuggestionService.service() }
+            SuggestionServiceWorkspacePlugin(workspace: $0) { SuggestionService() }
         }
         self.workspacePool = workspacePool
 
@@ -33,14 +33,10 @@ public final class Service {
                 Task { await PseudoCommandHandler().acceptSuggestion() }
             },
             expandSuggestion: {
-                if !ExpandableSuggestionService.shared.isSuggestionExpanded {
-                    ExpandableSuggestionService.shared.isSuggestionExpanded = true
-                }
+                // unused
             },
             collapseSuggestion: {
-                if ExpandableSuggestionService.shared.isSuggestionExpanded {
-                    ExpandableSuggestionService.shared.isSuggestionExpanded = false
-                }
+                // unused
             },
             dismissSuggestion: {
                 Task { await PseudoCommandHandler().dismissSuggestion() }
@@ -55,7 +51,6 @@ public final class Service {
     public func start() {
         scheduledCleaner.start()
         realtimeSuggestionController.start()
-        globalShortcutManager.start()
         keyBindingManager.start()
 
         Task {

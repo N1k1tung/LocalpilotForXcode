@@ -1,5 +1,4 @@
 import Foundation
-import SuggestionBasic
 
 public struct EditorContent: Codable {
     public struct Selection: Codable {
@@ -49,7 +48,7 @@ public struct EditorContent: Codable {
     public var suggesionLineLimit: Int?
 
     public func selectedCode(in selection: Selection) -> String {
-        return XPCShared.selectedCode(in: selection, for: lines)
+        return g_selectedCode(in: selection, for: lines)
     }
 }
 
@@ -65,7 +64,7 @@ public struct UpdatedContent: Codable {
     public var modifications: [Modification]
 }
 
-func selectedCode(in selection: EditorContent.Selection, for lines: [String]) -> String {
+func g_selectedCode(in selection: EditorContent.Selection, for lines: [String]) -> String {
     return EditorInformation.code(
         in: lines,
         inside: .init(

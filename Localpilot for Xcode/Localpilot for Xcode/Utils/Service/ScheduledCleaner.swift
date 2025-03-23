@@ -43,7 +43,7 @@ public final class ScheduledCleaner {
                 }
             }
         }
-        for (url, workspace) in service.workspacePool.workspaces {
+        for (url, workspace) in await service.workspacePool.workspaces {
             if workspace.isExpired, workspaceInfos[.url(url)] == nil {
                 dprint("Remove idle workspace")
                 await workspace.cleanUp(availableTabs: [])
@@ -51,20 +51,7 @@ public final class ScheduledCleaner {
             } else {
                 let tabs = (workspaceInfos[.url(url)]?.tabs ?? [])
                     .union(workspaceInfos[.unknown]?.tabs ?? [])
-                // cleanup chats for unused files
-                let filespaces = workspace.filespaces
-                for (url, _) in filespaces {
-                    if workspace.isFilespaceExpired(
-                        fileURL: url,
-                        availableTabs: tabs
-                    ) {
-                        _ = await Task { @MainActor in
-                            service.guiController.store.send(
-                                .promptToCodeGroup(.discardExpiredPromptToCode(documentURLs: [url]))
-                            )
-                        }.result
-                    }
-                }
+
                 // cleanup workspace
                 await workspace.cleanUp(availableTabs: tabs)
             }
@@ -73,7 +60,7 @@ public final class ScheduledCleaner {
 
     @ServiceActor
     public func closeAllChildProcesses() async {
-        BuiltinExtensionManager.shared.terminate()
+        // TODO: terminate running service
     }
 }
 

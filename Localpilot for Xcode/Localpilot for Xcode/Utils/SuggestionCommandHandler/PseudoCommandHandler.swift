@@ -3,6 +3,7 @@ import AppKit
 /// It's used to run some commands without really triggering the menu bar item.
 ///
 /// For example, we can use it to generate real-time suggestions without Apple Scripts.
+/// TODO: cleanup unnecessary gui presentation and related logic
 struct PseudoCommandHandler {
     static var lastTimeCommandFailedToTriggerWithAccessibilityAPI = Date(timeIntervalSince1970: 0)
     static var lastBundleNotFoundTime = Date(timeIntervalSince1970: 0)
@@ -10,33 +11,11 @@ struct PseudoCommandHandler {
 //    private var toast: ToastController { ToastControllerDependencyKey.liveValue }
 
     func presentPreviousSuggestion() async {
-        let handler = WindowBaseCommandHandler()
-        _ = try? await handler.presentPreviousSuggestion(editor: .init(
-            content: "",
-            lines: [],
-            uti: "",
-            cursorPosition: .outOfScope,
-            cursorOffset: -1,
-            selections: [],
-            tabSize: 0,
-            indentSize: 0,
-            usesTabsForIndentation: false
-        ))
+
     }
 
     func presentNextSuggestion() async {
-        let handler = WindowBaseCommandHandler()
-        _ = try? await handler.presentNextSuggestion(editor: .init(
-            content: "",
-            lines: [],
-            uti: "",
-            cursorPosition: .outOfScope,
-            cursorOffset: -1,
-            selections: [],
-            tabSize: 0,
-            indentSize: 0,
-            usesTabsForIndentation: false
-        ))
+
     }
 
     @WorkspaceActor
@@ -61,7 +40,7 @@ struct PseudoCommandHandler {
             ) {
                 return
             } else {
-                presenter.discardSuggestion(fileURL: filespace.fileURL)
+//                presenter.discardSuggestion(fileURL: filespace.fileURL)
             }
         }
 
@@ -78,17 +57,17 @@ struct PseudoCommandHandler {
                 )
             }
             if !filespace.errorMessage.isEmpty {
-                presenter
-                    .presentWarningMessage(
-                        filespace.errorMessage,
-                        url: "https://github.com/github-copilot/signup/copilot_individual"
-                    )
+//                presenter
+//                    .presentWarningMessage(
+//                        filespace.errorMessage,
+//                        url: "https://github.com/github-copilot/signup/copilot_individual"
+//                    )
             }
             if filespace.presentingSuggestion != nil {
-                presenter.presentSuggestion(fileURL: fileURL)
+//                presenter.presentSuggestion(fileURL: fileURL)
                 workspace.notifySuggestionShown(fileFileAt: fileURL)
             } else {
-                presenter.discardSuggestion(fileURL: fileURL)
+//                presenter.discardSuggestion(fileURL: fileURL)
             }
         } catch {
             return
@@ -109,7 +88,7 @@ struct PseudoCommandHandler {
             lines: content.lines,
             cursorPosition: content.cursorPosition
         ) {
-            PresentInWindowSuggestionPresenter().discardSuggestion(fileURL: fileURL)
+//            PresentInWindowSuggestionPresenter().discardSuggestion(fileURL: fileURL)
         }
     }
 

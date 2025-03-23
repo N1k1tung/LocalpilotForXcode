@@ -1,5 +1,4 @@
 import Foundation
-import Logger
 
 public enum XPCCommunicationBridgeError: Swift.Error, LocalizedError {
     case failedToCreateXPCConnection
@@ -17,21 +16,18 @@ public enum XPCCommunicationBridgeError: Swift.Error, LocalizedError {
 
 public class XPCCommunicationBridge {
     let service: XPCService
-    let logger: Logger
     @XPCServiceActor
     var serviceEndpoint: NSXPCListenerEndpoint?
 
-    public init(logger: Logger) {
+    public init() {
         service = .init(
             kind: .machService(
                 identifier: Bundle(for: XPCService.self)
                     .object(forInfoDictionaryKey: "BUNDLE_IDENTIFIER_BASE") as! String +
                     ".CommunicationBridge"
             ),
-            interface: NSXPCInterface(with: CommunicationBridgeXPCServiceProtocol.self),
-            logger: logger
+            interface: NSXPCInterface(with: CommunicationBridgeXPCServiceProtocol.self)
         )
-        self.logger = logger
     }
 
     public func setDelegate(_ delegate: XPCServiceDelegate?) {
@@ -72,7 +68,7 @@ extension XPCCommunicationBridge {
         guard let connection = service.connection
         else { throw XPCCommunicationBridgeError.failedToCreateXPCConnection }
         do {
-            return try await XPCShared.withXPCServiceConnected(connection: connection, fn)
+            return try await g_withXPCServiceConnected(connection: connection, fn)
         } catch {
             throw XPCCommunicationBridgeError.xpcServiceError(error)
         }

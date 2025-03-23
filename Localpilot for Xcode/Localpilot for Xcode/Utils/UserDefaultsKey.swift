@@ -30,6 +30,7 @@ public class UserDefaultsNonNilKey<T> {
     public init(_ defaults: UserDefaults = .standard, key: String, defaultValue: T) {
         self.key = key
         self.defaultValue = defaultValue
+        self.defaults = defaults
     }
 
     public var wrappedValue: T {
