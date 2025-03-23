@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/devm33/CGEventOverride",
       "state" : {
-        "branch" : "devm33/fix-stale-AXIsProcessTrusted",
-        "revision" : "06a9bf1f8f8d47cca221344101cc0274f04cc513"
+        "revision" : "571d36d63e68fac30e4a350600cd186697936f74",
+        "version" : "1.2.3"
       }
     },
     {

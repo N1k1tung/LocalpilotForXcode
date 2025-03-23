@@ -60,6 +60,7 @@
 		0CC63B2F2D906F3B0097D4E2 /* SettingsToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC63B2C2D906F3B0097D4E2 /* SettingsToggle.swift */; };
 		0CC63B302D906F3B0097D4E2 /* SettingsButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC63B292D906F3B0097D4E2 /* SettingsButtonRow.swift */; };
 		0CC63B312D906F3B0097D4E2 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC63B2B2D906F3B0097D4E2 /* SettingsTextField.swift */; };
+		0CC63B342D907BEB0097D4E2 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC63B332D907BE70097D4E2 /* AboutView.swift */; };
 		0CDF71152D8C292F002FA8D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF710B2D8C292F002FA8D6 /* Preview Assets.xcassets */; };
 		0CDF71162D8C292F002FA8D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF710E2D8C292F002FA8D6 /* Assets.xcassets */; };
 		0CDF71172D8C292F002FA8D6 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 0CDF710F2D8C292F002FA8D6 /* Config.xcconfig */; };
@@ -296,6 +297,7 @@
 		0CC63B2B2D906F3B0097D4E2 /* SettingsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
 		0CC63B2C2D906F3B0097D4E2 /* SettingsToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsToggle.swift; sourceTree = "<group>"; };
 		0CC63B322D90702C0097D4E2 /* TROUBLESHOOTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = TROUBLESHOOTING.md; path = ../TROUBLESHOOTING.md; sourceTree = SOURCE_ROOT; };
+		0CC63B332D907BE70097D4E2 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		0CDF710B2D8C292F002FA8D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0CDF710D2D8C292F002FA8D6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		0CDF710E2D8C292F002FA8D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				0CDF71112D8C292F002FA8D6 /* ContentView.swift */,
 				0CC63B212D906D140097D4E2 /* GeneralSettingsView.swift */,
 				0CC63B232D906D710097D4E2 /* GeneralSettingsViewModel.swift */,
+				0CC63B332D907BE70097D4E2 /* AboutView.swift */,
 				0CC63B272D906F160097D4E2 /* SettingsComponents */,
 				0CDF71122D8C292F002FA8D6 /* Info.plist */,
 				0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */,
@@ -870,6 +873,7 @@
 				0CEAFE0A2D901FE900DCA8E0 /* SuggestionInjector.swift in Sources */,
 				0CAD874E2D8CAF31002ABF1D /* SourceEditor.swift in Sources */,
 				0C1A62382D8F0FB00026F288 /* Workspace+Cleanup.swift in Sources */,
+				0CC63B342D907BEB0097D4E2 /* AboutView.swift in Sources */,
 				0CEAFE072D901FE700DCA8E0 /* WindowBaseCommandHandler.swift in Sources */,
 				0CAD874F2D8CAF31002ABF1D /* AppInstanceInspector.swift in Sources */,
 				0C1A622F2D8EF99B0026F288 /* Logs.swift in Sources */,
@@ -1365,8 +1369,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devm33/CGEventOverride";
 			requirement = {
-				branch = "devm33/fix-stale-AXIsProcessTrusted";
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
 			};
 		};
 		0C1A622B2D8EE3DA0026F288 /* XCRemoteSwiftPackageReference "CombineBinding" */ = {

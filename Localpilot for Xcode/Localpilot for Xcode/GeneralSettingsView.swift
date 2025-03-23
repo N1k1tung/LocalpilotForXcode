@@ -20,7 +20,7 @@ struct GeneralSettingsView: View {
             return HStack(spacing: 0) {
                 Text("Enable ")
                 Text(
-                    "Extensions \(Image(systemName: "puzzlepiece.extension.fill")) → Xcode Source Editor \(Image(systemName: "info.circle")) → GitHub Copilot for Xcode"
+                    "Extensions \(Image(systemName: "puzzlepiece.extension.fill")) → Xcode Source Editor \(Image(systemName: "info.circle")) → Localpilot for Xcode"
                 )
                 .bold()
                 .foregroundStyle(.primary)
@@ -59,7 +59,7 @@ struct GeneralSettingsView: View {
     var body: some View {
         SettingsSection(title: "General") {
             SettingsToggle(
-                title: "Quit GitHub Copilot when Xcode App is closed",
+                title: "Quit Localpilot when Xcode App is closed",
                 isOn: $viewModel.quitXPCServiceOnXcodeAndAppQuit
             )
             Divider()
@@ -85,7 +85,7 @@ struct GeneralSettingsView: View {
                 Spacer()
                 Button("?") {
                     NSWorkspace.shared.open(
-                        URL(string: "https://github.com/github/CopilotForXcode/blob/main/TROUBLESHOOTING.md")!
+                        URL(string: "https://github.com/n1k1tung/LocalpilotForXcode/blob/main/TROUBLESHOOTING.md")!
                     )
                 }
                 .clipShape(Circle())
@@ -101,7 +101,7 @@ struct GeneralSettingsView: View {
                 NSWorkspace.openXcodeExtensionsPreferences()
             }).keyboardShortcut(.defaultAction)
             Button("View How-to Guide", action: {
-                let url = "https://github.com/github/CopilotForXcode/blob/main/TROUBLESHOOTING.md#extension-permission"
+                let url = "https://github.com/n1k1tung/LocalpilotForXcode/blob/main/TROUBLESHOOTING.md#extension-permission"
                 NSWorkspace.shared.open(URL(string: url)!)
             })
             Button("Close", role: .cancel, action: {})
