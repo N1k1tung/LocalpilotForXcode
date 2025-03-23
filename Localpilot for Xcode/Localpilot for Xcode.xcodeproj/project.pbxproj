@@ -67,10 +67,17 @@
 		0CEAFDAE2D900FF900DCA8E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDAC2D900FF900DCA8E0 /* main.swift */; };
 		0CEAFDC22D90125500DCA8E0 /* XPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 0CEAFDB52D90125500DCA8E0 /* XPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0CEAFDCD2D90130800DCA8E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDC82D90130800DCA8E0 /* main.swift */; };
-		0CEAFDCE2D90130800DCA8E0 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDCA2D90130800DCA8E0 /* XPCService.swift */; };
-		0CEAFDCF2D90130800DCA8E0 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDCB2D90130800DCA8E0 /* XPCServiceProtocol.swift */; };
 		0CEAFDD22D90146200DCA8E0 /* CommunicationBridge in Embed Helpers */ = {isa = PBXBuildFile; fileRef = 0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0CEAFDD62D9014EA00DCA8E0 /* bridgeLaunchAgent.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */; };
+		0CEAFDD72D90177C00DCA8E0 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */; };
+		0CEAFDD82D90177C00DCA8E0 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62462D8F2ED00026F288 /* XPCService.swift */; };
+		0CEAFDD92D90181A00DCA8E0 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62422D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift */; };
+		0CEAFDDD2D9018A000DCA8E0 /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDDC2D9018A000DCA8E0 /* ServiceDelegate.swift */; };
+		0CEAFDDE2D90195200DCA8E0 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A622E2D8EF9980026F288 /* Logs.swift */; };
+		0CEAFDDF2D90195200DCA8E0 /* Logs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A622E2D8EF9980026F288 /* Logs.swift */; };
+		0CEAFDE22D901A1300DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
+		0CEAFDE32D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
+		0CEAFDE42D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */; };
 		0CF538F12D8DC7CF007CE2B5 /* LanguageServerProtocol in Frameworks */ = {isa = PBXBuildFile; productRef = 0CF538F02D8DC7CF007CE2B5 /* LanguageServerProtocol */; };
 		0CF538F52D8DC81A007CE2B5 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F22D8DC81A007CE2B5 /* Status.swift */; };
 		0CF538F62D8DC81A007CE2B5 /* StatusObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */; };
@@ -223,9 +230,9 @@
 		0CEAFDC72D90130800DCA8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CEAFDC82D90130800DCA8E0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0CEAFDC92D90130800DCA8E0 /* XPCService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCService.entitlements; sourceTree = "<group>"; };
-		0CEAFDCA2D90130800DCA8E0 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
-		0CEAFDCB2D90130800DCA8E0 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
 		0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = bridgeLaunchAgent.plist; sourceTree = "<group>"; };
+		0CEAFDDC2D9018A000DCA8E0 /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
+		0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceGlobals.swift; sourceTree = "<group>"; };
 		0CF538F22D8DC81A007CE2B5 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		0CF538F32D8DC81A007CE2B5 /* StatusObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusObserver.swift; sourceTree = "<group>"; };
 		0CF538F72D8DD0EA007CE2B5 /* PseudoCommandHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoCommandHandler.swift; sourceTree = "<group>"; };
@@ -313,6 +320,7 @@
 				0C1A62442D8F2ED00026F288 /* XPCCommunicationBridge.swift */,
 				0C1A62452D8F2ED00026F288 /* XPCExtensionService.swift */,
 				0C1A62462D8F2ED00026F288 /* XPCService.swift */,
+				0CEAFDE12D901A0D00DCA8E0 /* XPCServiceGlobals.swift */,
 				0C1A62472D8F2ED00026F288 /* XPCServiceProtocol.swift */,
 			);
 			path = XPCShared;
@@ -322,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				0C1A62322D8EFB830026F288 /* README.md */,
+				0CDF711C2D8C2937002FA8D6 /* Common */,
 				0CDF71142D8C292F002FA8D6 /* Localpilot for Xcode */,
 				0CEAFD9D2D900F7500DCA8E0 /* SourceExtension */,
 				0CEAFDAD2D900FF900DCA8E0 /* CommunicationBridge */,
@@ -389,7 +398,6 @@
 		0CDF71142D8C292F002FA8D6 /* Localpilot for Xcode */ = {
 			isa = PBXGroup;
 			children = (
-				0CDF711C2D8C2937002FA8D6 /* Utils */,
 				0CDF710C2D8C292F002FA8D6 /* Preview Content */,
 				0CDF710D2D8C292F002FA8D6 /* App.swift */,
 				0CDF710E2D8C292F002FA8D6 /* Assets.xcassets */,
@@ -403,7 +411,7 @@
 			path = "Localpilot for Xcode";
 			sourceTree = "<group>";
 		};
-		0CDF711C2D8C2937002FA8D6 /* Utils */ = {
+		0CDF711C2D8C2937002FA8D6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				0C1A62482D8F2ED00026F288 /* XPCShared */,
@@ -420,7 +428,7 @@
 				0C1A622E2D8EF9980026F288 /* Logs.swift */,
 				0C1A62332D8F06270026F288 /* UserDefaultsKey.swift */,
 			);
-			path = Utils;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		0CEAFD852D900F5C00DCA8E0 /* Frameworks */ = {
@@ -447,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				0CEAFDAC2D900FF900DCA8E0 /* main.swift */,
+				0CEAFDDC2D9018A000DCA8E0 /* ServiceDelegate.swift */,
 			);
 			path = CommunicationBridge;
 			sourceTree = "<group>";
@@ -457,8 +466,6 @@
 				0CEAFDC72D90130800DCA8E0 /* Info.plist */,
 				0CEAFDC82D90130800DCA8E0 /* main.swift */,
 				0CEAFDC92D90130800DCA8E0 /* XPCService.entitlements */,
-				0CEAFDCA2D90130800DCA8E0 /* XPCService.swift */,
-				0CEAFDCB2D90130800DCA8E0 /* XPCServiceProtocol.swift */,
 			);
 			path = XPCService;
 			sourceTree = "<group>";
@@ -676,6 +683,7 @@
 				0CAD87492D8CAF31002ABF1D /* XcodeAppInstanceInspector.swift in Sources */,
 				0CAD874A2D8CAF31002ABF1D /* XcodeInspector+TriggerCommand.swift in Sources */,
 				0C1A62362D8F0F6E0026F288 /* ScheduledCleaner.swift in Sources */,
+				0CEAFDE22D901A1300DCA8E0 /* XPCServiceGlobals.swift in Sources */,
 				0C1A62492D8F2ED00026F288 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */,
 				0C1A624A2D8F2ED00026F288 /* XPCService.swift in Sources */,
 				0C1A624B2D8F2ED00026F288 /* XPCExtensionService.swift in Sources */,
@@ -734,6 +742,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEAFDD92D90181A00DCA8E0 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */,
+				0CEAFDDD2D9018A000DCA8E0 /* ServiceDelegate.swift in Sources */,
+				0CEAFDE32D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */,
+				0CEAFDDE2D90195200DCA8E0 /* Logs.swift in Sources */,
 				0CEAFDAE2D900FF900DCA8E0 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -742,9 +754,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CEAFDD72D90177C00DCA8E0 /* XPCServiceProtocol.swift in Sources */,
+				0CEAFDD82D90177C00DCA8E0 /* XPCService.swift in Sources */,
+				0CEAFDE42D901A3A00DCA8E0 /* XPCServiceGlobals.swift in Sources */,
+				0CEAFDDF2D90195200DCA8E0 /* Logs.swift in Sources */,
 				0CEAFDCD2D90130800DCA8E0 /* main.swift in Sources */,
-				0CEAFDCE2D90130800DCA8E0 /* XPCService.swift in Sources */,
-				0CEAFDCF2D90130800DCA8E0 /* XPCServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
