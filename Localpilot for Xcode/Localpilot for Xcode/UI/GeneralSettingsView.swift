@@ -106,7 +106,7 @@ struct GeneralSettingsView: View {
             })
             Button("Close", role: .cancel, action: {})
         } message: {
-            Text("To enable faster and full-featured code completion, navigate to:\nExtensions → Xcode Source Editor → GitHub Copilot for Xcode.")
+            Text("To enable faster and full-featured code completion, navigate to:\nExtensions → Xcode Source Editor → Localpilot for Xcode.")
         }
         .task {
             if viewModel.extensionPermissionShown { return }
@@ -123,7 +123,11 @@ struct GeneralSettingsView: View {
             
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("Quit and restart Xcode to enable Github Copilot for Xcode extension.")
+            Text("Quit and restart Xcode to enable Localpilot for Xcode extension.")
+        }
+        .padding()
+        .onAppear {
+            viewModel.didAppear()
         }
     }
 }

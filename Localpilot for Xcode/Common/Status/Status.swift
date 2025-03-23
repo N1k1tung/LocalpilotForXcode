@@ -30,8 +30,8 @@ private struct AccessibilityStatusInfo {
 }
 
 public extension Notification.Name {
-    static let authStatusDidChange = Notification.Name("com.github.CopilotForXcode.authStatusDidChange")
-    static let serviceStatusDidChange = Notification.Name("com.github.CopilotForXcode.serviceStatusDidChange")
+    static let authStatusDidChange = Notification.Name("com.n1k1tung.LocalpilotForXcode.authStatusDidChange")
+    static let serviceStatusDidChange = Notification.Name("com.n1k1tung.LocalpilotForXcode.serviceStatusDidChange")
 }
 
 public struct StatusResponse {

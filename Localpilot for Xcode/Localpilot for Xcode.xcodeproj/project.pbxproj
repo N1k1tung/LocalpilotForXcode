@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C02A0BA2D90CEFB005A5E90 /* LaunchAgentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02A0B92D90CEFB005A5E90 /* LaunchAgentManager.swift */; };
 		0C1A620A2D8EC6380026F288 /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A62092D8EC6380026F288 /* Parsing */; };
 		0C1A621B2D8EC7F10026F288 /* WorkspacePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A621A2D8EC7F10026F288 /* WorkspacePool.swift */; };
 		0C1A621C2D8EC7F10026F288 /* FileSaveWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */; };
@@ -246,6 +247,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C02A0B92D90CEFB005A5E90 /* LaunchAgentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAgentManager.swift; sourceTree = "<group>"; };
 		0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaveWatcher.swift; sourceTree = "<group>"; };
 		0C1A62172D8EC7F10026F288 /* Filespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filespace.swift; sourceTree = "<group>"; };
 		0C1A62182D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedFileRocoverableStorage.swift; sourceTree = "<group>"; };
@@ -386,6 +388,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C02A0BB2D90CF01005A5E90 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0CDF71112D8C292F002FA8D6 /* ContentView.swift */,
+				0CC63B212D906D140097D4E2 /* GeneralSettingsView.swift */,
+				0CC63B232D906D710097D4E2 /* GeneralSettingsViewModel.swift */,
+				0CC63B332D907BE70097D4E2 /* AboutView.swift */,
+				0CC63B272D906F160097D4E2 /* SettingsComponents */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		0C1A62202D8EC83E0026F288 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,11 +541,8 @@
 				0CDF710E2D8C292F002FA8D6 /* Assets.xcassets */,
 				0CDF710F2D8C292F002FA8D6 /* Config.xcconfig */,
 				0CDF71102D8C292F002FA8D6 /* Config.dev.xcconfig */,
-				0CDF71112D8C292F002FA8D6 /* ContentView.swift */,
-				0CC63B212D906D140097D4E2 /* GeneralSettingsView.swift */,
-				0CC63B232D906D710097D4E2 /* GeneralSettingsViewModel.swift */,
-				0CC63B332D907BE70097D4E2 /* AboutView.swift */,
-				0CC63B272D906F160097D4E2 /* SettingsComponents */,
+				0C02A0B92D90CEFB005A5E90 /* LaunchAgentManager.swift */,
+				0C02A0BB2D90CF01005A5E90 /* UI */,
 				0CDF71122D8C292F002FA8D6 /* Info.plist */,
 				0CEAFDD32D90148A00DCA8E0 /* bridgeLaunchAgent.plist */,
 				0CDF71132D8C292F002FA8D6 /* Localpilot_for_Xcode.entitlements */,
@@ -841,6 +852,7 @@
 				0CC63B222D906D140097D4E2 /* GeneralSettingsView.swift in Sources */,
 				0C1A624C2D8F2ED00026F288 /* XPCCommunicationBridge.swift in Sources */,
 				0C1A624D2D8F2ED00026F288 /* Models.swift in Sources */,
+				0C02A0BA2D90CEFB005A5E90 /* LaunchAgentManager.swift in Sources */,
 				0C1A624E2D8F2ED00026F288 /* XPCServiceProtocol.swift in Sources */,
 				0CAD874B2D8CAF31002ABF1D /* XcodeWindowInspector.swift in Sources */,
 				0CAD87552D8CB07D002ABF1D /* AXNotificationStream.swift in Sources */,

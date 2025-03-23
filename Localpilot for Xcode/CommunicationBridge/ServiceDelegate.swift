@@ -110,7 +110,7 @@ actor EventHandler {
 actor ExtensionServiceLauncher {
     let appIdentifier = bundleIdentifierBase.appending(".ExtensionService")
     let appURL = Bundle.main.bundleURL.appendingPathComponent(
-        "GitHub Copilot for Xcode Extension.app"
+        "Localpilot Extension.xpc"
     )
     var isLaunching: Bool = false
     var application: NSRunningApplication?

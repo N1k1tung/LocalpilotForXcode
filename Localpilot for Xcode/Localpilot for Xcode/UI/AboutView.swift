@@ -4,20 +4,27 @@ import SwiftUI
 import AppKit
 
 struct RTFTextView: NSViewRepresentable {
-    let rtfContent: NSAttributedString
+    let content: NSAttributedString
 
-    func makeNSView(context: Context) -> NSTextView {
-        let textView = NSTextView()
+    func makeNSView(context: Context) -> NSScrollView {
+        let scrollView = NSTextView.scrollableTextView()
+
+        let textView = scrollView.documentView as! NSTextView
         textView.isEditable = false
         textView.isSelectable = true
         textView.drawsBackground = false
+        textView.isRichText = true
         textView.textContainer?.lineFragmentPadding = 0
         textView.textContainerInset = .zero
-        return textView
+        textView.textStorage?.setAttributedString(content)
+
+        return scrollView
     }
 
-    func updateNSView(_ textView: NSTextView, context: Context) {
-        textView.textStorage?.setAttributedString(rtfContent)
+    func updateNSView(_ scrollView: NSScrollView, context: Context) {
+        if let textView = scrollView.documentView as? NSTextView {
+            textView.textStorage?.setAttributedString(content)
+        }
     }
 }
 
@@ -27,9 +34,8 @@ public struct AboutView: View {
             Text("Aknowledegments")
                 .font(.headline)
                 .padding(.vertical)
-            ScrollView {
-                RTFTextView(rtfContent: loadRTFText(filename: "Credits"))
-            }
+            RTFTextView(content: loadRTFText(filename: "Credits"))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .padding()
     }
@@ -40,8 +46,12 @@ public struct AboutView: View {
               let attributedString = try? NSAttributedString(data: data,
                                                              options: [.documentType: NSAttributedString.DocumentType.rtf],
                                                              documentAttributes: nil) else {
-            return NSAttributedString(string: "Failed to load RTF file.")
+            return NSAttributedString(string: "Failed to load file.")
         }
         return attributedString
     }
+}
+
+#Preview {
+    AboutView()
 }

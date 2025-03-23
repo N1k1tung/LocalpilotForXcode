@@ -7,5 +7,7 @@
 		<key>ServiceType</key>
 		<string>Application</string>
 	</dict>
+	<key>BUNDLE_IDENTIFIER_BASE</key>
+	<string>$(BUNDLE_IDENTIFIER_BASE)</string>
 </dict>
 </plist>
