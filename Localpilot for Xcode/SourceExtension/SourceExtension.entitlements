@@ -5,7 +5,7 @@
 	<key>com.apple.security.temporary-exception.mach-lookup.global-name</key>
 	<array>
 		<string>$(BUNDLE_IDENTIFIER_BASE).CommunicationBridge</string>
-		<string>$(BUNDLE_IDENTIFIER_BASE).ExtensionService</string>
+		<string>$(BUNDLE_IDENTIFIER_BASE).XPCService</string>
 	</array>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>

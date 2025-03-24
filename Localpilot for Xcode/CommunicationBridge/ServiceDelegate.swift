@@ -108,9 +108,9 @@ actor EventHandler {
 }
 
 actor ExtensionServiceLauncher {
-    let appIdentifier = bundleIdentifierBase.appending(".ExtensionService")
+    let appIdentifier = bundleIdentifierBase.appending(".XPCService")
     let appURL = Bundle.main.bundleURL.appendingPathComponent(
-        "Localpilot Extension.xpc"
+        "Localpilot Extension.app"
     )
     var isLaunching: Bool = false
     var application: NSRunningApplication?
