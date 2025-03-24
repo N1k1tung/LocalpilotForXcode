@@ -323,7 +323,7 @@
 		0CEAFD9C2D900F7500DCA8E0 /* SourceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SourceExtension.entitlements; sourceTree = "<group>"; };
 		0CEAFDA52D900FF000DCA8E0 /* CommunicationBridge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CommunicationBridge; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEAFDAC2D900FF900DCA8E0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		0CEAFDB52D90125500DCA8E0 /* Localpilot Extension.app */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = "Localpilot Extension.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CEAFDB52D90125500DCA8E0 /* Localpilot Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Localpilot Extension.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEAFDC72D90130800DCA8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CEAFDC82D90130800DCA8E0 /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		0CEAFDC92D90130800DCA8E0 /* XPCService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCService.entitlements; sourceTree = "<group>"; };
@@ -751,7 +751,7 @@
 			);
 			productName = XPCService;
 			productReference = 0CEAFDB52D90125500DCA8E0 /* Localpilot Extension.app */;
-			productType = "com.apple.product-type.xpc-service";
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -1319,7 +1319,6 @@
 				STRIP_STYLE = all;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -1353,7 +1352,6 @@
 				STRIP_STYLE = all;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};

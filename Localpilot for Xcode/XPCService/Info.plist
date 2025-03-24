@@ -4,6 +4,8 @@
 <dict>
 	<key>BUNDLE_IDENTIFIER_BASE</key>
 	<string>$(BUNDLE_IDENTIFIER_BASE)</string>
+	<key>EXTENSION_BUNDLE_NAME</key>
+	<string>$(EXTENSION_BUNDLE_NAME)</string>
 	<key>XPCService</key>
 	<dict>
 		<key>ServiceType</key>

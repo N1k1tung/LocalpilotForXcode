@@ -9,3 +9,4 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 BUNDLE_IDENTIFIER_BASE = com.n1k1tung.localpilot
 EXTENSION_SERVICE_NAME = Localpilot Extension
+EXTENSION_BUNDLE_NAME = XPCService
