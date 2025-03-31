@@ -15,6 +15,7 @@
 		0C1108B62D92157A00BC6171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C1108B52D92157A00BC6171 /* Main.storyboard */; };
 		0C1108B82D9216D100BC6171 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1108B72D9216D100BC6171 /* Assets.xcassets */; };
 		0C1108B92D92174E00BC6171 /* Localpilot Extension.app in Embed Helpers */ = {isa = PBXBuildFile; fileRef = 0CEAFDB52D90125500DCA8E0 /* Localpilot Extension.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0C1108BB2D921F5C00BC6171 /* SyncTextSettingsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1108BA2D921F5C00BC6171 /* SyncTextSettingsCommand.swift */; };
 		0C1A620A2D8EC6380026F288 /* Parsing in Frameworks */ = {isa = PBXBuildFile; productRef = 0C1A62092D8EC6380026F288 /* Parsing */; };
 		0C1A621B2D8EC7F10026F288 /* WorkspacePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A621A2D8EC7F10026F288 /* WorkspacePool.swift */; };
 		0C1A621C2D8EC7F10026F288 /* FileSaveWatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */; };
@@ -59,6 +60,8 @@
 		0CAD87612D8CB1D4002ABF1D /* CodeSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87572D8CB1D4002ABF1D /* CodeSuggestion.swift */; };
 		0CAD87622D8CB1D4002ABF1D /* ExportedFromLSP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD87592D8CB1D4002ABF1D /* ExportedFromLSP.swift */; };
 		0CAD87632D8CB1D4002ABF1D /* String+LineEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAD875C2D8CB1D4002ABF1D /* String+LineEnding.swift */; };
+		0CB0F1602D931B60009081E8 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEAFD882D900F5C00DCA8E0 /* XcodeKit.framework */; };
+		0CB0F1612D931B60009081E8 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEAFD882D900F5C00DCA8E0 /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0CC63B202D905FB10097D4E2 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0CC63B1F2D905FB10097D4E2 /* Credits.rtf */; };
 		0CC63B222D906D140097D4E2 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC63B212D906D140097D4E2 /* GeneralSettingsView.swift */; };
 		0CC63B242D906D730097D4E2 /* GeneralSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC63B232D906D710097D4E2 /* GeneralSettingsViewModel.swift */; };
@@ -81,7 +84,6 @@
 		0CDF711E2D8C29CF002FA8D6 /* XcodeInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF711D2D8C29CF002FA8D6 /* XcodeInspector.swift */; };
 		0CDF71222D8C2AB4002FA8D6 /* AXUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDF71212D8C2AB4002FA8D6 /* AXUIElement.swift */; };
 		0CEAFD872D900F5C00DCA8E0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEAFD862D900F5C00DCA8E0 /* Cocoa.framework */; };
-		0CEAFD892D900F5C00DCA8E0 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEAFD882D900F5C00DCA8E0 /* XcodeKit.framework */; };
 		0CEAFD932D900F5C00DCA8E0 /* Localpilot.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0CEAFD842D900F5C00DCA8E0 /* Localpilot.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0CEAFD9F2D900F7500DCA8E0 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFD9B2D900F7500DCA8E0 /* SourceEditorExtension.swift */; };
 		0CEAFDAE2D900FF900DCA8E0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEAFDAC2D900FF900DCA8E0 /* main.swift */; };
@@ -201,6 +203,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0CB0F1622D931B60009081E8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0CB0F1612D931B60009081E8 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CEAFD942D900F5C00DCA8E0 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +265,7 @@
 		0C1108B22D92154000BC6171 /* AppDelegate+Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Menu.swift"; sourceTree = "<group>"; };
 		0C1108B52D92157A00BC6171 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0C1108B72D9216D100BC6171 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C1108BA2D921F5C00BC6171 /* SyncTextSettingsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncTextSettingsCommand.swift; sourceTree = "<group>"; };
 		0C1A62162D8EC7F10026F288 /* FileSaveWatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileSaveWatcher.swift; sourceTree = "<group>"; };
 		0C1A62172D8EC7F10026F288 /* Filespace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filespace.swift; sourceTree = "<group>"; };
 		0C1A62182D8EC7F10026F288 /* OpenedFileRocoverableStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedFileRocoverableStorage.swift; sourceTree = "<group>"; };
@@ -364,8 +378,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEAFD872D900F5C00DCA8E0 /* Cocoa.framework in Frameworks */,
+				0CB0F1602D931B60009081E8 /* XcodeKit.framework in Frameworks */,
 				0CEAFE3E2D902DF300DCA8E0 /* LanguageServerProtocol in Frameworks */,
-				0CEAFD892D900F5C00DCA8E0 /* XcodeKit.framework in Frameworks */,
 				0CEAFE402D902DF300DCA8E0 /* Parsing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +607,7 @@
 				0CEAFE2B2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift */,
 				0CEAFE362D902A3B00DCA8E0 /* RejectSuggestionCommand.swift */,
 				0CEAFE382D902A5900DCA8E0 /* CustomCommand.swift */,
+				0C1108BA2D921F5C00BC6171 /* SyncTextSettingsCommand.swift */,
 				0CEAFD9C2D900F7500DCA8E0 /* SourceExtension.entitlements */,
 			);
 			path = SourceExtension;
@@ -696,6 +711,7 @@
 				0CEAFD802D900F5C00DCA8E0 /* Sources */,
 				0CEAFD812D900F5C00DCA8E0 /* Frameworks */,
 				0CEAFD822D900F5C00DCA8E0 /* Resources */,
+				0CB0F1622D931B60009081E8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -929,6 +945,7 @@
 				0CEAFE372D902A3B00DCA8E0 /* RejectSuggestionCommand.swift in Sources */,
 				0CEAFE2C2D9029F300DCA8E0 /* GetSuggestionsCommand.swift in Sources */,
 				0CEAFE3B2D902B6D00DCA8E0 /* Status.swift in Sources */,
+				0C1108BB2D921F5C00BC6171 /* SyncTextSettingsCommand.swift in Sources */,
 				0CEAFE2D2D9029F300DCA8E0 /* AcceptSuggestionCommand.swift in Sources */,
 				0CEAFE3C2D902B9500DCA8E0 /* CommunicationBridgeXPCServiceProtocol.swift in Sources */,
 			);

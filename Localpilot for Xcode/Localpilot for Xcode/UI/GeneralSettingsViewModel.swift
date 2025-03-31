@@ -11,9 +11,9 @@ final class GeneralSettingsViewModel: ObservableObject {
     @Published var shouldPresentExtensionPermissionAlert = false
     @Published var shouldShowRestartXcodeAlert = false
 
-    private(set) var xpcServiceVersion: String?
-    private(set) var isAccessibilityPermissionGranted: ObservedAXStatus = .unknown
-    private(set) var isExtensionPermissionGranted: ExtensionPermissionStatus = .unknown
+    @Published private(set) var xpcServiceVersion: String?
+    @Published private(set) var isAccessibilityPermissionGranted: ObservedAXStatus = .unknown
+    @Published private(set) var isExtensionPermissionGranted: ExtensionPermissionStatus = .unknown
     private(set) var isReloading = false
     private var reloadTask: Task<Void, Error>?
 
@@ -94,10 +94,12 @@ final class GeneralSettingsViewModel: ObservableObject {
     }
 
     func finishReloading(version: String?, axStatus: ObservedAXStatus, extensionStatus: ExtensionPermissionStatus) {
-        xpcServiceVersion = version
-        isAccessibilityPermissionGranted = axStatus
-        isExtensionPermissionGranted = extensionStatus
         isReloading = false
+        Task { @MainActor in
+            xpcServiceVersion = version
+            isAccessibilityPermissionGranted = axStatus
+            isExtensionPermissionGranted = extensionStatus
+        }
     }
 
     func failedReloading() {

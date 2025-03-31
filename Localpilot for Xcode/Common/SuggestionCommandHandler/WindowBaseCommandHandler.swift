@@ -7,6 +7,16 @@ struct WindowBaseCommandHandler: SuggestionCommandHandler {
     nonisolated init() {}
 
     func presentSuggestions(editor: EditorContent) async throws -> UpdatedContent? {
+        Task {
+            do {
+                try await _presentSuggestions(editor: editor)
+            } catch let error as ServerError {
+                Logger.service.error(error)
+            } catch {
+                presenter.presentError(error)
+                Logger.service.error(error)
+            }
+        }
         return nil
     }
 

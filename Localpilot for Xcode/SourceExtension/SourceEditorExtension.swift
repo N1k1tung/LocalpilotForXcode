@@ -9,6 +9,7 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
             AcceptSuggestionCommand(),
             RejectSuggestionCommand(),
             GetSuggestionsCommand(),
+            SyncTextSettingsCommand()
         ].map(makeCommandDefinition)
     }
 
@@ -21,6 +22,7 @@ class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     func extensionDidFinishLaunching() {
 #if DEBUG
         // In a debug build, we usually want to use the XPC service run from Xcode.
+        print("Running in debug mode, skipping XPC service initialization...")
 #else
         // When the source extension is initialized
         // we can call a random command to wake up the XPC service.
